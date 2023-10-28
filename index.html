@@ -254,12 +254,6 @@
         // console.log("startBtn");
     </script>
 
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
-    <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/MotionPathPlugin.min.js"></script> -->
-    <!-- <script src="https://assets.codepen.io/16327/GSDevTools3.min.js"></script> -->
-
     <!-- Threejs載入 -->
     <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
     <script type="importmap">
@@ -329,50 +323,6 @@
         const controls = new OrbitControls(camera, renderer.domElement);
 
     </script>
-
-
-
-
-
-
-    <!-- gsap套件使用 -->
-    <!-- <script>
-        gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin, GSDevTools);
-
-        gsap.defaults({ ease: "none" });
-
-        const pulses = gsap.timeline({
-            defaults: {
-                scale: 1.1,
-                autoAlpha: 1,
-                transformOrigin: 'center',
-                ease: "elastic(2.0, 1)"
-            }
-        })
-            .to(".ball02, #concept-text", {}, 1.96)
-            .to(".ball03, #design-text", {}, 4.0)
-            .to(".ball04, #code-text", {}, 6.06)
-            .to(".ball05, #model-text", {}, 8.10)
-
-
-        const main = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#svg",
-                scrub: true,
-                start: "top center",
-                end: "bottom center"
-            }
-        })
-            .to(".ball01", { autoAlpha: 1, duration: 0.05 })
-            .from(".theRoad", { drawSVG: 0, duration: 10 }, 0)
-            .to(".ball01", {
-                motionPath: {
-                    path: ".theRoad",
-                    align: ".theRoad",
-                    alignOrigin: [0.5, 0.5],
-                }, duration: 10
-            }, 0)
-            .add(pulses, 0)  </script>-->
 
 
     <script>
