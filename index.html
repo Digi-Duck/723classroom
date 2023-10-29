@@ -14,6 +14,7 @@
 
 <body>
     <div class="container">
+        <div id="mouse-circle"></div>
         <div class="ham-menu">
             <input class="check-box" type="checkbox" id="ham-switch">
             <label for="ham-switch" class="ham-btn">
@@ -217,25 +218,33 @@
             <div class="title">關於我們</div>
             <div class="cards-team">
                 <div class="card">
-                    <div class="pic"></div>
+                    <div class="pic">
+                        <img src="../picture/avatar/01-chen/chen-front.png" id="avatar-chen" alt="">
+                    </div>
                     <div class="name">曾惠貞</div>
                     <div class="skill">企劃 前端</div>
                     <div class="btn-aboutme">About Me</div>
                 </div>
                 <div class="card">
-                    <div class="pic"></div>
+                    <div class="pic">
+                        <img src="../picture/avatar/02-tong/tong-front.png" id="avatar-tong" alt="">
+                    </div>
                     <div class="name">蕭芸同</div>
                     <div class="skill">UIUX設計</div>
                     <div class="btn-aboutme">About Me</div>
                 </div>
                 <div class="card">
-                    <div class="pic"></div>
+                    <div class="pic">
+                        <img src="../picture/avatar/03-ying/ying-front.png" id="avatar-ying" alt="">
+                    </div>
                     <div class="name">楊承穎</div>
                     <div class="skill">3D模型設計</div>
                     <div class="btn-aboutme">About Me</div>
                 </div>
                 <div class="card">
-                    <div class="pic"></div>
+                    <div class="pic">
+                        <img src="../picture/avatar/04-rong/rong-front.png" id="avatar-rong" alt="">
+                    </div>
                     <div class="name">周慶龍</div>
                     <div class="skill">3D模型設計</div>
                     <div class="btn-aboutme">About Me</div>
@@ -266,6 +275,31 @@
         </section>
     </div>
 
+    <!-- 滑鼠追蹤 -->
+    <script>
+        window.addEventListener("mousemove", (evt) => {
+            const x = evt.pageX;
+            const y = evt.pageY;
+            console.log(x,y);
+
+            // const cat = document.querySelector("#cat");
+            const mouseCircle = document.querySelector("#mouse-circle");
+            console.log(mouseCircle);
+            mouseCircle.style["left"] = x + "px";
+            mouseCircle.style["top"] = y + "px";
+
+            if (x < (window.innerWidth) / 2 - 50) {
+                console.log("left");
+                // cat.src = "./pic/left.png";
+            } else if (x > (window.innerWidth) / 2 + 50) {
+                console.log("right");
+                // cat.src = "./pic/right.png";
+            } else {
+                console.log("middle");
+                // cat.src = "./pic/top.png";
+            }
+        })
+    </script>
 
     <!-- aosjs套件 -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

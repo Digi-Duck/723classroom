@@ -37,6 +37,19 @@ html {
     overflow: hidden;
 }
 
+#mouse-circle {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    border: 10px solid #FF9855;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    //讓滑鼠還是可以按到按鈕
+    pointer-events: none;
+}
+
 .ham-btn {
     right: 3%;
     top: 5%;
@@ -519,12 +532,12 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:12%;
+    gap: 12%;
 
     .card-m {
         display: flex;
         justify-content: center;
-        gap:45px;
+        gap: 45px;
 
         .model-pic {
             width: 345px;
@@ -586,7 +599,13 @@ html {
                 width: 200px;
                 height: 200px;
                 border-radius: 50%;
-                background-color: #aaa;
+                background-color: #88ACFF;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
 
             .name {
