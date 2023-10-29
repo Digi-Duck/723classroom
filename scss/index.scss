@@ -45,39 +45,44 @@ html {
     cursor: pointer;
 
     .checked {
-        width: 102px; 
-        height: 96px; 
+        width: 102px;
+        height: 96px;
         display: block;
     }
 
     .notchecked {
-        width: 101px; 
+        width: 101px;
         height: 96px;
         display: none;
     }
 }
-@media (max-width: 1200px){
-    .ham-btn{
+
+@media (max-width: 1200px) {
+    .ham-btn {
         .checked {
-            width: 70px; 
-            height: 65px; 
+            width: 70px;
+            height: 65px;
         }
+
         .notchecked {
-            width: 70px; 
+            width: 70px;
             height: 65px;
         }
     }
 }
+
 @media (max-width: 576px) {
-    .ham-btn{
+    .ham-btn {
         right: 18px;
         top: 18px;
+
         .checked {
-            width: 45px; 
-            height: 40px; 
+            width: 45px;
+            height: 40px;
         }
+
         .notchecked {
-            width: 45px; 
+            width: 45px;
             height: 40px;
         }
     }
@@ -115,6 +120,29 @@ html {
 
 }
 
+@media (max-width: 1200px) {
+    .list {
+        height: 100vh;
+
+        .lists {
+            margin-top: unset;
+            justify-content: center;
+            gap: 60px;
+
+            a {
+                font-size: 24px;
+                margin-bottom: unset;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .list {
+        width: 100%;
+    }
+}
+
 //漢堡條//
 .ham-menu {
     #ham-switch {
@@ -143,7 +171,12 @@ html {
 
     #ham-switch:not(:checked)~.list {
         transform: translateX(362px);
+
+        @media (max-width: 576px) {
+            transform: translateX(100%);
+        }
     }
+
 }
 
 #intro {
@@ -239,7 +272,7 @@ html {
 
     .vector-circle {
         position: absolute;
-        left:75%;
+        left: 75%;
         top: 55%;
         animation: vector 5s -2s infinite;
     }
@@ -258,10 +291,11 @@ html {
 
 @media (max-width: 1200px) {
     #intro {
-        .title{
+        .title {
             font-size: 100px;
         }
-        .subtitle{
+
+        .subtitle {
             font-size: 20px;
             margin-top: 30px;
         }
@@ -270,10 +304,11 @@ html {
 
 @media (max-width: 576px) {
     #intro {
-        .title{
+        .title {
             font-size: 40px;
         }
-        .subtitle{
+
+        .subtitle {
             font-size: 12px;
             margin-top: 40px;
         }
@@ -293,36 +328,42 @@ html {
         max-height: 720px;
         height: 100%;
         background-color: #aaa;
-        position: relative;        
-        .mask{
+        position: relative;
+
+        .mask {
             width: 100%;
             height: 100%;
             background-color: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(5px);
             position: absolute;
-            left:0;
-            top:0;
-            display:flex;
+            left: 0;
+            top: 0;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap:30px;
-            .title{
+            gap: 30px;
+
+            .title {
                 font-size: 80px;
                 position: relative;
-                svg{
+
+                svg {
                     position: absolute;
-                    right:-10%;
-                    bottom:-30%;
+                    right: -10%;
+                    bottom: -30%;
                 }
             }
-            .text{
+
+            .text {
                 font-size: 25px;
             }
         }
-        .mask-none{
-            display:none;
+
+        .mask-none {
+            display: none;
         }
+
         .btn-start {
             margin-top: 10px;
             width: 188px;
@@ -331,7 +372,7 @@ html {
             background-color: #88ACFF;
             line-height: 70px;
             font-size: 28px;
-            color:#F7F7F7;
+            color: #F7F7F7;
             padding: 0px 60px;
             cursor: pointer;
         }
@@ -344,7 +385,7 @@ html {
     .plan {
         .plan-top {
             width: 100%;
-            height: 920px;
+            padding: 100px;
             background-color: #fff;
             display: flex;
             justify-content: center;
@@ -452,19 +493,23 @@ html {
 
     .webStory {
         width: 100%;
-        height: 3917px;
+        height: 3908px;
         background-color: #88ACFF;
         position: relative;
+        text-align: center;
 
         .storyRoad {
+            display: inline-block;
             position: absolute;
             top: 0;
-            left: 85px;
+            left: 50%;
+            height: 100%;
+            transform: translateX(-50%);
 
-            .ball {
-                fill: white;
-                visibility: hidden;
-            }
+            // .theRoad {
+            //     stroke-dasharray: 800;
+            //     stroke-dashoffset: 800;
+            // }
         }
     }
 }
@@ -615,16 +660,19 @@ html {
     margin-bottom: 30px;
     cursor: pointer;
     display: none;
-    svg{
-        fill:#F7F7F7;
+
+    svg {
+        fill: #F7F7F7;
     }
 }
+
 .totop:hover {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
     background-color: #F7F7F7;
-    color:#FF9855;
-    svg{
-        fill:#FF9855;
+    color: #FF9855;
+
+    svg {
+        fill: #FF9855;
     }
 }
 

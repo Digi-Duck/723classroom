@@ -99,6 +99,25 @@ html {
   color: #FF9855;
 }
 
+@media (max-width: 1200px) {
+  .list {
+    height: 100vh;
+  }
+  .list .lists {
+    margin-top: unset;
+    justify-content: center;
+    gap: 60px;
+  }
+  .list .lists a {
+    font-size: 24px;
+    margin-bottom: unset;
+  }
+}
+@media (max-width: 576px) {
+  .list {
+    width: 100%;
+  }
+}
 .ham-menu #ham-switch {
   display: none;
 }
@@ -119,6 +138,11 @@ html {
 }
 .ham-menu #ham-switch:not(:checked) ~ .list {
   transform: translateX(362px);
+}
+@media (max-width: 576px) {
+  .ham-menu #ham-switch:not(:checked) ~ .list {
+    transform: translateX(100%);
+  }
 }
 
 #intro {
@@ -296,7 +320,7 @@ html {
 }
 #introduce .plan .plan-top {
   width: 100%;
-  height: 920px;
+  padding: 100px;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -386,18 +410,18 @@ html {
 }
 #introduce .webStory {
   width: 100%;
-  height: 3917px;
+  height: 3908px;
   background-color: #88ACFF;
   position: relative;
+  text-align: center;
 }
 #introduce .webStory .storyRoad {
+  display: inline-block;
   position: absolute;
   top: 0;
-  left: 85px;
-}
-#introduce .webStory .storyRoad .ball {
-  fill: white;
-  visibility: hidden;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
 }
 
 #introduce .webStory {
