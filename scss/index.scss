@@ -658,17 +658,15 @@ html {
 .totop {
     background-color: #FF9855;
     width: 190px;
-    position: sticky;
-    float: right;
-    bottom: 35px;
+    position: fixed;
+    right: 3%;
+    bottom: 2%;
     z-index: 7;
     text-align: center;
     border-radius: 40px;
     color: #F7F7F7;
     font-size: 28px;
     padding: 10px;
-    margin-right: 50px;
-    margin-bottom: 30px;
     cursor: pointer;
     display: none;
 

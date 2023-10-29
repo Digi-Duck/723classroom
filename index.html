@@ -127,7 +127,7 @@
                             -政府提供最高10萬元訓練費用</br>
                             -提供五加二產業創新計劃相關技能培訓
                         </div>
-                        <div class="btn-more" onclick="window.open('https://www.google.com/');">了解更多</div>
+                        <div class="btn-more" onclick="window.open('https://elite.taiwanjobs.gov.tw/');">了解更多</div>
                     </div>
                     <div class="plan-pic"></div>
                 </div>
@@ -407,18 +407,26 @@
     <script>
         //SCROLL UP
         let mybutton = document.getElementById("myBtn");
+        const introduceSection = document.getElementById("introduce");
         window.onscroll = function () { scrollFunction() };
         function scrollFunction() {
-            if (document.body.scrollTop > 1900 || document.documentElement.scrollTop > 1900) {
+            if (document.body.scrollTop > introduceSection.offsetTop || document.documentElement.scrollTop > introduceSection.offsetTop) {
                 mybutton.style.display = "block";
             } else {
                 mybutton.style.display = "none";
             }
         }
 
-        function topFunction() {
-            document.body.scrollTop = 1100;
-            document.documentElement.scrollTop = 1100;
+        mybutton.addEventListener("click", scrollToExploreSection);
+
+        function scrollToExploreSection() {
+            const exploreSection = document.getElementById("explore");
+            if (exploreSection) {
+                window.scrollTo({
+                    top: exploreSection.offsetTop,
+                    behavior: "smooth"
+                });
+            }
         }
     </script>
 </body>
