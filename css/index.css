@@ -429,11 +429,11 @@ html {
   height: 3917px;
   background-color: #88ACFF;
   position: relative;
-  padding: 577px 0px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 12%;
 }
 #introduce .webStory .card-m {
   width: 1104px;
@@ -456,12 +456,6 @@ html {
   margin-top: 77px;
   width: 700px;
   font-size: 25px;
-}
-#introduce .webStory .card-m #concept-text,
-#introduce .webStory .card-m #design-text,
-#introduce .webStory .card-m #code-text,
-#introduce .webStory .card-m #model-text {
-  visibility: hidden;
 }
 
 #aboutUs {

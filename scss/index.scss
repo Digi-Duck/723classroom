@@ -505,11 +505,6 @@ html {
             left: 50%;
             height: 100%;
             transform: translateX(-50%);
-
-            // .theRoad {
-            //     stroke-dasharray: 800;
-            //     stroke-dashoffset: 800;
-            // }
         }
     }
 }
@@ -520,11 +515,11 @@ html {
     height: 3917px;
     background-color: #88ACFF;
     position: relative;
-    padding: 577px 0px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap:12%;
 
     .card-m {
         width: 1104px;
@@ -550,13 +545,6 @@ html {
                 width: 700px;
                 font-size: 25px;
             }
-        }
-
-        #concept-text,
-        #design-text,
-        #code-text,
-        #model-text {
-            visibility: hidden;
         }
     }
 }

@@ -7,6 +7,9 @@
     <title>723教室旅程</title>
     <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css">
     <link rel="stylesheet" href="./css/index.css">
+
+    <!-- aos套件 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -14,16 +17,14 @@
         <div class="ham-menu">
             <input class="check-box" type="checkbox" id="ham-switch">
             <label for="ham-switch" class="ham-btn">
-                <svg class="checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 96"
-                    fill="none">
+                <svg class="checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 96" fill="none">
                     <path
                         d="M101.417 48L90.2332 35.2583L91.7915 18.3917L75.2457 14.6333L66.5832 0.0583496L50.9999 6.75002L35.4165 0.0583496L26.754 14.6333L10.2082 18.3458L11.7665 35.2125L0.583252 48L11.7665 60.7417L10.2082 77.6542L26.754 81.4125L35.4165 95.9875L50.9999 89.25L66.5832 95.9417L75.2457 81.3667L91.7915 77.6083L90.2332 60.7417L101.417 48Z"
                         fill="#FF9855" />
                     <path d="M34.9583 59.4583H67.0416M34.9583 48H67.0416M34.9583 36.5417H67.0416" stroke="white"
                         stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <svg class="notchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 96"
-                    fill="none">
+                <svg class="notchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 96" fill="none">
                     <g clip-path="url(#clip0_428_3523)">
                         <path
                             d="M100.833 47.9417L89.65 35.2L91.2083 18.3333L74.6625 14.575L66 0L50.4167 6.69167L34.8333 0L26.1708 14.575L9.625 18.2875L11.1833 35.1542L0 47.9417L11.1833 60.6833L9.625 77.5958L26.1708 81.3542L34.8333 95.9292L50.4167 89.1917L66 95.8833L74.6625 81.3083L91.2083 77.55L89.65 60.6833L100.833 47.9417Z"
@@ -150,13 +151,13 @@
                 </div> -->
             </div>
             <div class="webStory">
-                <svg id="svg" class="storyRoad" xmlns="http://www.w3.org/2000/svg" viewBox="-30 0 1750 3917"
-                    fill="none" preserveAspectRatio="xMidYMax meet">
+                <svg id="svg" class="storyRoad" xmlns="http://www.w3.org/2000/svg" viewBox="-30 0 1750 3917" fill="none"
+                    preserveAspectRatio="xMidYMax meet">
                     <path class="theRoad"
                         d="M1508.5 -31.5C1511.98 100.279 1523.91 397.317 1159.5 397.317C795.09 397.317 602.983 397.317 592.362 397.317C207.5 397.317 50 515 50 749.5C50 984 185.5 1138.64 592.362 1138.64H1079.74C1408.8 1138.64 1630.5 1284 1630.5 1540.5C1630.5 1775.5 1433.5 1964.21 1079.74 1964.21H592.362C268.5 1959 50 2081.5 50 2359.5C50 2637.5 249.5 2770.5 592.362 2770.5H1079.74C1422.5 2770.5 1630 2914 1630 3164.5C1630 3415 1444.76 3577.5 1083 3577.5H840.5H588.5C302.638 3577.5 169.5 3673.5 169.5 3954.5"
                         stroke="#EAEEF4" stroke-width="100" />
                 </svg>
-                <div class="card-m concept">
+                <div class="card-m concept" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-center">
                     <div class="model-pic"></div>
                     <div id="concept-text" class="text-area">
                         <div class="title">Concept</div>
@@ -165,7 +166,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="card-m design">
+                <div class="card-m design" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-center">
                     <div id="design-text" class="text-area">
                         <div class="title">Design</div>
                         <p>
@@ -179,7 +180,7 @@
                     </div>
                     <div class="model-pic"></div>
                 </div>
-                <div class="card-m code">
+                <div class="card-m code" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-center">
                     <div class="model-pic"></div>
                     <div id="code-text" class="text-area">
                         <div class="title">Code</div>
@@ -188,7 +189,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="card-m model">
+                <div class="card-m model" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-center">
                     <div id="model-text" class="text-area">
                         <div class="title">Model</div>
                         <p>723教室,我們的冒險世界!</br>
@@ -253,7 +254,11 @@
     </div>
 
 
-
+    <!-- aosjs套件 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- 引入scrollRoad -->
     <script src="./js/scrollRoad.js"></script>
     <script>
@@ -261,7 +266,7 @@
         let startBtn = document.querySelector(".btn-start");
         let mask = document.querySelector(".mask");
         console.log(mask);
-        startBtn.addEventListener("click",()=>{
+        startBtn.addEventListener("click", () => {
             mask.classList.add('mask-none');
         })
     </script>
