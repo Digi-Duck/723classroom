@@ -18,31 +18,61 @@ html {
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  background-color: #FFF5D6;
 }
 
 .container {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   position: relative;
+  margin: auto;
+  overflow: hidden;
 }
 
 .ham-btn {
-  width: 110px;
-  height: 110px;
-  right: 55px;
-  top: 52px;
+  right: 3%;
+  top: 5%;
   position: fixed;
   z-index: 9;
   cursor: pointer;
 }
 .ham-btn .checked {
+  width: 102px;
+  height: 96px;
   display: block;
 }
 .ham-btn .notchecked {
+  width: 101px;
+  height: 96px;
   display: none;
 }
 
+@media (max-width: 1200px) {
+  .ham-btn .checked {
+    width: 70px;
+    height: 65px;
+  }
+  .ham-btn .notchecked {
+    width: 70px;
+    height: 65px;
+  }
+}
+@media (max-width: 576px) {
+  .ham-btn {
+    right: 18px;
+    top: 18px;
+  }
+  .ham-btn .checked {
+    width: 45px;
+    height: 40px;
+  }
+  .ham-btn .notchecked {
+    width: 45px;
+    height: 40px;
+  }
+}
 .list {
-  width: 436px;
+  width: 362px;
   height: 1091px;
   background-color: #fff;
   position: fixed;
@@ -88,17 +118,17 @@ html {
   transform: translateX(0px);
 }
 .ham-menu #ham-switch:not(:checked) ~ .list {
-  transform: translateX(436px);
+  transform: translateX(362px);
 }
 
 #intro {
   width: 100%;
-  height: 1090px;
+  height: 100vh;
   background-color: #FFF5D6;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  padding: 396px 0px;
   position: relative;
 }
 #intro .title {
@@ -132,23 +162,24 @@ html {
 }
 #intro .cloud {
   width: 100%;
-  height: 367px;
+  height: 40%;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   background-image: url(../picture/白雲.png);
   background-position: center center;
+  background-repeat: no-repeat;
 }
 #intro svg {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#intro .big {
+#intro .arrow-bt {
   bottom: 2%;
   animation: up-down 1s infinite;
 }
-#intro .small {
+#intro .arrow-top {
   bottom: 5%;
   transform: translate(-50%, -50%) scale(0.8);
   animation: up-down-small 1s infinite;
@@ -163,15 +194,15 @@ html {
     transform: translate(-50%, -40%) scale(0.8);
   }
 }
-#intro .vector {
+#intro .vector-star {
   position: absolute;
   left: 23%;
   top: 42%;
   animation: vector 5s infinite;
 }
-#intro .vector02 {
+#intro .vector-circle {
   position: absolute;
-  left: 70%;
+  left: 75%;
   top: 55%;
   animation: vector 5s -2s infinite;
 }
@@ -184,23 +215,71 @@ html {
   }
 }
 
+@media (max-width: 1200px) {
+  #intro .title {
+    font-size: 100px;
+  }
+  #intro .subtitle {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 576px) {
+  #intro .title {
+    font-size: 40px;
+  }
+  #intro .subtitle {
+    font-size: 12px;
+    margin-top: 40px;
+  }
+}
 #explore {
   width: 100%;
-  height: 920px;
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 100px 0px;
 }
 #explore .gamebox {
-  width: 1280px;
-  height: 720px;
+  max-width: 1280px;
+  max-height: 720px;
+  height: 100%;
   background-color: #aaa;
+  position: relative;
+}
+#explore .gamebox .mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: absolute;
+  left: 0;
+  top: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+}
+#explore .gamebox .mask .title {
+  font-size: 80px;
+  position: relative;
+}
+#explore .gamebox .mask .title svg {
+  position: absolute;
+  right: -10%;
+  bottom: -30%;
+}
+#explore .gamebox .mask .text {
+  font-size: 25px;
+}
+#explore .gamebox .mask-none {
+  display: none;
 }
 #explore .gamebox .btn-start {
+  margin-top: 10px;
   width: 188px;
   height: 70px;
   border-radius: 60px;
@@ -210,13 +289,6 @@ html {
   color: #F7F7F7;
   padding: 0px 60px;
   cursor: pointer;
-}
-#explore .mask {
-  background-color: #333;
-  position: absolute;
-}
-#explore .mask-none {
-  display: none;
 }
 
 #introduce {
