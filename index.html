@@ -280,23 +280,39 @@
         window.addEventListener("mousemove", (evt) => {
             const x = evt.pageX;
             const y = evt.pageY;
-            console.log(x,y);
+            // console.log(x, y);
 
-            // const cat = document.querySelector("#cat");
+            const chen = document.querySelector("#avatar-chen");
+            const tong = document.querySelector("#avatar-tong");
+            const ying = document.querySelector("#avatar-ying");
+            const rong = document.querySelector("#avatar-rong");
+            const aboutUs = document.querySelector("#aboutUs");
             const mouseCircle = document.querySelector("#mouse-circle");
-            console.log(mouseCircle);
             mouseCircle.style["left"] = x + "px";
             mouseCircle.style["top"] = y + "px";
 
-            if (x < (window.innerWidth) / 2 - 50) {
-                console.log("left");
-                // cat.src = "./pic/left.png";
-            } else if (x > (window.innerWidth) / 2 + 50) {
-                console.log("right");
-                // cat.src = "./pic/right.png";
+            if (x < (aboutUs.offsetWidth) / 2 - 50) {
+                // console.log("left");
+                chen.src = "../picture/avatar/01-chen/chen-left.png";
+                tong.src = "../picture/avatar/02-tong/tong-left.png";
+                ying.src = "../picture/avatar/03-ying/ying-left.png";
+                rong.src = "../picture/avatar/04-rong/rong-left.png";
+            } else if (x > (aboutUs.offsetWidth) / 2 + 50) {
+                // console.log("right");
+                chen.src = "../picture/avatar/01-chen/chen-right.png";
+                tong.src = "../picture/avatar/02-tong/tong-right.png";
+                ying.src = "../picture/avatar/03-ying/ying-right.png";
+                rong.src = "../picture/avatar/04-rong/rong-right.png";
+            } else if (y > (aboutUs.offsetHeight) / 2) {
+                chen.src = "../picture/avatar/01-chen/chen-top.png";
+                tong.src = "../picture/avatar/02-tong/tong-top.png";
+                ying.src = "../picture/avatar/03-ying/ying-top.png";
+                rong.src = "../picture/avatar/04-rong/rong-top.png";
             } else {
-                console.log("middle");
-                // cat.src = "./pic/top.png";
+                chen.src = "../picture/avatar/01-chen/chen-down.png";
+                tong.src = "../picture/avatar/02-tong/tong-down.png";
+                ying.src = "../picture/avatar/03-ying/ying-down.png";
+                rong.src = "../picture/avatar/04-rong/rong-down.png";
             }
         })
     </script>
@@ -312,7 +328,7 @@
         //增加mask的遮罩
         let startBtn = document.querySelector(".btn-start");
         let mask = document.querySelector(".mask");
-        console.log(mask);
+        // console.log(mask);
         startBtn.addEventListener("click", () => {
             mask.classList.add('mask-none');
         })

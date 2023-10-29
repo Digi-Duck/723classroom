@@ -1,7 +1,7 @@
 // 宣告路徑
 let path = document.querySelector('.theRoad');
 let pathLength = path.getTotalLength();
-console.log(pathLength);
+// console.log(pathLength);
 path.style.strokeDasharray = pathLength + ' ' + pathLength;
 
 // 設定速度倍數，调整滾動速度
