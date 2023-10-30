@@ -167,13 +167,35 @@ html {
   flex-direction: column;
   position: relative;
 }
-#intro .title {
+#intro .title-area {
+  position: relative;
+}
+#intro .title-area .vector-star {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  left: -12%;
+  top: -5%;
+  animation: vector 5s infinite;
+  z-index: 1;
+}
+#intro .title-area .vector-circle {
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  right: -5%;
+  bottom: -50%;
+  animation: vector 5s -2s infinite;
+  z-index: 1;
+}
+#intro .title-area .title {
+  position: relative;
   font-family: "Nikumaru Font";
   font-size: 160px;
   animation: fade-in 4s;
   animation-fill-mode: forwards;
   opacity: 0;
-  z-index: 3;
+  z-index: 5;
 }
 #intro .subtitle {
   font-size: 28px;
@@ -206,17 +228,20 @@ html {
   background-position: center center;
   background-repeat: no-repeat;
 }
-#intro svg {
+#intro .arrow-bt,
+#intro .arrow-top {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 80px;
+  height: 50px;
 }
 #intro .arrow-bt {
-  bottom: 2%;
+  bottom: 20px;
   animation: up-down 1s infinite;
 }
 #intro .arrow-top {
-  bottom: 5%;
+  bottom: 50px;
   transform: translate(-50%, -50%) scale(0.8);
   animation: up-down-small 1s infinite;
 }
@@ -230,43 +255,69 @@ html {
     transform: translate(-50%, -40%) scale(0.8);
   }
 }
-#intro .vector-star {
-  position: absolute;
-  left: 23%;
-  top: 42%;
-  animation: vector 5s infinite;
-}
-#intro .vector-circle {
-  position: absolute;
-  left: 75%;
-  top: 55%;
-  animation: vector 5s -2s infinite;
-}
 @keyframes vector {
   0% {
-    transform: translate(0px, 0px);
+    transform: translate(0%, 0%);
   }
   50% {
-    transform: translate(0px, -100px);
+    transform: translate(0%, -50%);
   }
 }
 
 @media (max-width: 1200px) {
-  #intro .title {
+  #intro .title-area .vector-star {
+    width: 120px;
+    height: 120px;
+  }
+  #intro .title-area .vector-circle {
+    width: 90px;
+    height: 90px;
+  }
+  #intro .title-area .title {
     font-size: 100px;
   }
   #intro .subtitle {
     font-size: 20px;
     margin-top: 30px;
   }
+  #intro .arrow-bt,
+  #intro .arrow-top {
+    width: 48px;
+    height: 30px;
+  }
+  #intro .arrow-bt {
+    bottom: 20px;
+  }
+  #intro .arrow-top {
+    bottom: 35px;
+  }
 }
 @media (max-width: 576px) {
-  #intro .title {
-    font-size: 40px;
+  #intro .title-area .vector-star {
+    width: 60px;
+    height: 60px;
+  }
+  #intro .title-area .vector-circle {
+    width: 40px;
+    height: 40px;
+  }
+  #intro .title-area .title {
+    font-size: 48px;
   }
   #intro .subtitle {
-    font-size: 12px;
-    margin-top: 40px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  #intro .arrow-bt,
+  #intro .arrow-top {
+    width: 32px;
+    height: 20px;
+  }
+  #intro .arrow-bt {
+    bottom: 10px;
+  }
+  #intro .arrow-top {
+    bottom: 25px;
   }
 }
 #explore {
@@ -340,8 +391,6 @@ html {
 }
 #introduce .plan .plan-top .plan-info {
   margin-right: 120px;
-  width: 720px;
-  height: 574px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -350,14 +399,22 @@ html {
   font-size: 40px;
   align-self: flex-start;
 }
-#introduce .plan .plan-top .plan-info .text {
-  width: 600px;
+#introduce .plan .plan-top .plan-info .plan-pic-s {
+  display: none;
+  margin: 36px auto 0px;
+  width: 100%;
+  background-image: url(../picture/planpic.png);
+  background-position: 60% center;
+  background-repeat: no-repeat;
+  background-size: 150%;
 }
 #introduce .plan .plan-top .plan-info .text01 {
+  width: 100%;
   margin-top: 90px;
   font-size: 50px;
 }
 #introduce .plan .plan-top .plan-info .text02 {
+  width: 100%;
   margin-top: 77px;
   font-size: 18px;
 }
@@ -376,7 +433,8 @@ html {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 #introduce .plan .plan-top .plan-pic {
-  width: 823px;
+  width: 50%;
+  min-width: 490px;
   height: 683px;
   background-image: url(../picture/planpic.png);
   background-position: 60% center;
@@ -420,6 +478,69 @@ html {
   width: 100%;
   height: 46px;
   background-color: #ECECEC;
+}
+@media (max-width: 1330px) {
+  #introduce .plan .plan-top .plan-info .title {
+    font-size: 30px;
+  }
+  #introduce .plan .plan-top .plan-info .text01 {
+    font-size: 40px;
+  }
+  #introduce .plan .plan-top .plan-pic {
+    height: 500px;
+    min-width: none;
+  }
+}
+@media (max-width: 1200px) {
+  #introduce .plan .plan-top {
+    padding: 60px;
+  }
+  #introduce .plan .plan-top .plan-info {
+    margin-right: 60px;
+  }
+  #introduce .plan .plan-top .plan-info .title {
+    font-size: 30px;
+    align-self: flex-start;
+  }
+  #introduce .plan .plan-top .plan-info .text01 {
+    margin-top: 90px;
+    font-size: 30px;
+  }
+  #introduce .plan .plan-top .plan-info .text02 {
+    margin-top: 77px;
+    font-size: 15px;
+  }
+  #introduce .plan .plan-top .plan-pic {
+    height: 400px;
+  }
+}
+@media (max-width: 992px) {
+  #introduce .plan .plan-top .plan-info {
+    width: 80%;
+  }
+  #introduce .plan .plan-top .plan-info .title {
+    font-size: 40px;
+  }
+  #introduce .plan .plan-top .plan-info .plan-pic-s {
+    width: 500px;
+    height: 420px;
+    display: block;
+  }
+  #introduce .plan .plan-top .plan-info .text01 {
+    width: 100%;
+    margin-top: 40px;
+    line-height: 1.2;
+  }
+  #introduce .plan .plan-top .plan-info .text02 {
+    margin-top: 20px;
+    line-height: 1.2;
+  }
+  #introduce .plan .plan-top .plan-info .btn-more {
+    align-self: flex-start;
+  }
+  #introduce .plan .plan-top .plan-pic {
+    display: none;
+  }
 }
 #introduce .webStory {
   width: 100%;
