@@ -412,11 +412,13 @@ html {
   width: 100%;
   margin-top: 90px;
   font-size: 50px;
+  line-height: 1.5;
 }
 #introduce .plan .plan-top .plan-info .text02 {
   width: 100%;
   margin-top: 77px;
   font-size: 18px;
+  line-height: 1.2;
 }
 #introduce .plan .plan-top .plan-info .btn-more {
   width: 145px;
@@ -424,8 +426,9 @@ html {
   background-color: #88ACFF;
   border-radius: 60px;
   margin-top: 80px;
-  padding: 10px 40px;
   font-size: 15px;
+  line-height: 40px;
+  text-align: center;
   color: #F7F7F7;
   cursor: pointer;
 }
