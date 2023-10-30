@@ -515,6 +515,9 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
 }
+#aboutUs .cards-team .card .pic-1 {
+  background-color: #FF9855;
+}
 #aboutUs .cards-team .card .name {
   font-size: 25px;
 }
@@ -558,12 +561,12 @@ html {
   width: 190px;
   position: fixed;
   right: 3%;
-  bottom: 2%;
+  bottom: 3%;
   z-index: 7;
   text-align: center;
   border-radius: 40px;
   color: #F7F7F7;
-  font-size: 28px;
+  font-size: 30px;
   padding: 10px;
   cursor: pointer;
   display: none;
