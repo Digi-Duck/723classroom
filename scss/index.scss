@@ -355,6 +355,27 @@ html {
     }
 }
 
+@media (max-width: 600px) {
+    #intro {
+        .title-area {
+            .vector-star {
+                width: 90px;
+                height: 90px;
+            }
+
+            .vector-circle {
+                width: 50px;
+                height: 50px;
+            }
+
+            .title {
+                font-size: 80px;
+            }
+        }
+
+    }
+}
+
 @media (max-width: 576px) {
     #intro {
         .title-area {
@@ -639,32 +660,39 @@ html {
 
     @media (max-width: 992px) {
         .plan {
-            .plan-top{
+            .plan-top {
                 .plan-info {
                     margin: unset;
-                    .title{
+
+                    .title {
                         font-size: 40px;
                     }
+
                     width: 80%;
+
                     .plan-pic-s {
                         width: 500px;
                         height: 420px;
                         display: block;
                     }
+
                     .text01 {
                         width: 100%;
                         margin-top: 40px;
                         line-height: 1.2;
                     }
+
                     .text02 {
                         margin-top: 20px;
                         line-height: 1.2;
                     }
-                    .btn-more{
+
+                    .btn-more {
                         align-self: flex-start;
+                        margin-top: 20px;
                     }
                 }
-    
+
                 .plan-pic {
                     display: none;
                 }
@@ -672,22 +700,22 @@ html {
         }
     }
 
-    .webStory {
-        width: 100%;
-        height: 3908px;
-        background-color: #88ACFF;
-        position: relative;
-        text-align: center;
+    // .webStory {
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: #88ACFF;
+    //     position: relative;
+    //     text-align: center;
 
-        .storyRoad {
-            display: inline-block;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            height: 100%;
-            transform: translateX(-50%);
-        }
-    }
+    //     .storyRoad {
+    //         display: inline-block;
+    //         position: absolute;
+    //         top: 0;
+    //         left: 50%;
+    //         height: 100%;
+    //         transform: translateX(-50%);
+    //     }
+    // }
 }
 
 
@@ -702,6 +730,19 @@ html {
     align-items: center;
     gap: 12%;
 
+    .storyRoad-straight {
+        display: none;
+    }
+
+    .storyRoad {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+
     .card-m {
         display: flex;
         justify-content: center;
@@ -710,7 +751,11 @@ html {
         .model-pic {
             width: 345px;
             height: 345px;
-            // background-color: #aaa;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
 
         .text-area {
@@ -733,6 +778,83 @@ html {
         }
     }
 }
+
+@media (max-width: 1750px) {
+    #introduce .webStory {
+        width: 100%;
+
+        .storyRoad {
+            width: 95%;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    #introduce .webStory {
+        gap: 15%;
+        padding: 0px 180px;
+
+        .card-m {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+
+            .model-pic {
+                min-width: 250px;
+                min-height: 250px;
+                width: 250px;
+                height: 250px;
+            }
+
+            .text-area {
+                line-height: 1.2;
+
+                .title {
+                    font-size: 30px;
+                }
+
+                p {
+                    width: 100%;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    #introduce .webStory {
+        gap: 5%;
+        height: 1300px;
+
+        .storyRoad {
+            display: none;
+        }
+
+        .card-m {
+            justify-content: center;
+
+            .text-area {
+                height: 200px;
+            }
+
+            .text-area.order {
+                order: 2;
+            }
+        }
+
+        .storyRoad-straight {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 10%;
+            height: 100%;
+            transform: translateX(-50%);
+        }
+    }
+}
+@media (max-width: 992px){}
+
 
 #aboutUs {
     width: 100%;
