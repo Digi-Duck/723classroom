@@ -757,7 +757,9 @@ html {
                 height: 100%;
             }
         }
-
+        .text-short{
+            display: none;
+        }
         .text-area {
             color: #F7F7F7;
             text-align: left;
@@ -774,9 +776,6 @@ html {
             p {
                 width: 100%;
                 font-size: 25px;
-            }
-            .text-short{
-                display: none;
             }
         }
     }
@@ -803,10 +802,10 @@ html {
             gap: 30px;
 
             .model-pic {
-                min-width: 250px;
-                min-height: 250px;
                 width: 250px;
                 height: 250px;
+                min-width: 250px;
+                min-height: 250px;
             }
 
             .text-area {
@@ -859,16 +858,75 @@ html {
 @media (max-width: 992px){
     #introduce .webStory {
         padding: 0px 80px;
-        card-m{
+    }
+}
+@media (max-width: 768px){
+    #introduce .webStory {
+        padding: 0px 40px;
+        .card-m{
+            .model-pic {
+                width: 200px;
+                height:200px;
+                min-width: 200px;
+                min-height: 200px;
+            }
             .text-area{
-                .text-short .strong{
+                .title{
+                    font-size: 36px;
+                }
+                p{
+                    display: none;
+                }
+                .text-short{
                     display: block;
-                    background-color: red;
+                    font-size: 18px;
+                    margin: 18px 0px;
                 }
             }
         }
     }
 }
+@media (max-width: 576px){
+    #introduce .webStory {
+        padding: 0px 20px;
+        .card-m {
+            gap: 20px;
+            .text-area{
+                .title{
+                    font-size: 24px;
+                }
+            }
+            .model-pic {
+                width: 150px;
+                height:150px;
+                min-width: 150px;
+                min-height: 150px;
+            }
+        }
+    }
+}
+@media (max-width: 375px){
+    #introduce .webStory {
+        padding: 0px 20px;
+        .card-m{
+            .model-pic {
+                width: 80px;
+                height:80px;
+                min-width: 80px;
+                min-height: 80px;
+            }
+            .text-area{
+                .title{
+                    font-size: 18px;
+                }
+                .text-short{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
 
 
 #aboutUs {
@@ -999,6 +1057,7 @@ html {
     padding: 10px;
     cursor: pointer;
     display: none;
+    text-decoration: none;
 
     svg {
         fill: #F7F7F7;

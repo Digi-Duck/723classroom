@@ -595,6 +595,9 @@ html {
   width: 100%;
   height: 100%;
 }
+#introduce .webStory .card-m .text-short {
+  display: none;
+}
 #introduce .webStory .card-m .text-area {
   color: #F7F7F7;
   text-align: left;
@@ -610,9 +613,6 @@ html {
 #introduce .webStory .card-m .text-area p {
   width: 100%;
   font-size: 25px;
-}
-#introduce .webStory .card-m .text-area .text-short {
-  display: none;
 }
 
 @media (max-width: 1750px) {
@@ -634,10 +634,10 @@ html {
     gap: 30px;
   }
   #introduce .webStory .card-m .model-pic {
-    min-width: 250px;
-    min-height: 250px;
     width: 250px;
     height: 250px;
+    min-width: 250px;
+    min-height: 250px;
   }
   #introduce .webStory .card-m .text-area {
     line-height: 1.2;
@@ -680,9 +680,61 @@ html {
   #introduce .webStory {
     padding: 0px 80px;
   }
-  #introduce .webStory card-m .text-area .text-short .strong {
+}
+@media (max-width: 768px) {
+  #introduce .webStory {
+    padding: 0px 40px;
+  }
+  #introduce .webStory .card-m .model-pic {
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+  }
+  #introduce .webStory .card-m .text-area .title {
+    font-size: 36px;
+  }
+  #introduce .webStory .card-m .text-area p {
+    display: none;
+  }
+  #introduce .webStory .card-m .text-area .text-short {
     display: block;
-    background-color: red;
+    font-size: 18px;
+    margin: 18px 0px;
+  }
+}
+@media (max-width: 576px) {
+  #introduce .webStory {
+    padding: 0px 20px;
+  }
+  #introduce .webStory .card-m {
+    gap: 20px;
+  }
+  #introduce .webStory .card-m .text-area .title {
+    font-size: 24px;
+  }
+  #introduce .webStory .card-m .model-pic {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+  }
+}
+@media (max-width: 375px) {
+  #introduce .webStory {
+    padding: 0px 20px;
+  }
+  #introduce .webStory .card-m .model-pic {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+  }
+  #introduce .webStory .card-m .text-area .title {
+    font-size: 18px;
+  }
+  #introduce .webStory .card-m .text-area .text-short {
+    font-size: 12px;
   }
 }
 #aboutUs {
@@ -797,6 +849,7 @@ html {
   padding: 10px;
   cursor: pointer;
   display: none;
+  text-decoration: none;
 }
 .totop svg {
   fill: #F7F7F7;

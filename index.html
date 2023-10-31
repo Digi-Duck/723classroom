@@ -182,8 +182,8 @@
                         <p>723教室，我們的冒險世界！</br>
                             每位同學如同RPG中的新手，從零開始。學習一開始或許有些無聊，就像遊戲中升等和裝備收集。然而，隨著時間推移，我們變得更強，知識成為我們的寶藏，我們開始自由創作，與同學們互相學習。這個教室彷彿我們的冒險基地，充滿趣味和挑戰。
                         </p>
-                        <p class="text-short strong">723教室，我們的冒險世界！</br>
-                            每位同學如同RPG中的新手，從零開始。學習一開始或許有些無聊，就像遊戲中升等和裝備收集。然而，隨著時間推移，我們變得更強，知識成為我們的寶藏，我們開始自由創作，與同學們互相學習。這個教室彷彿我們的冒險基地，充滿趣味和挑戰。
+                        <p class="text-short">723教室，我們的冒險世界！</br>
+                            每位同學如同RPG中的新手，從零開始。隨著時間推移，我們變得更強，知識成為我們的寶藏，開始自由創作。這個教室彷彿我們的冒險基地一樣，充滿趣味和挑戰！
                         </p>
                     </div>
                 </div>
@@ -193,6 +193,9 @@
                         <div class="title">Design</div>
                         <p>
                             我們的主要風格定調為可愛且有趣，運用圓形元素來營造氛圍。整個頁面配置旨在呈現一個完整的故事感，從引言一直延續到使用者的互動留言部分，以提升使用者的參與感。</br>我們採用一頁式網頁版面，讓每個區塊連貫串聯，其中加入了一些動畫視覺效果，旨在持續給使用者帶來驚喜感。這樣，使用者能夠充分享受這趟愉快的故事旅程，每一頁都充滿樂趣和互動的機會。
+                        </p>
+                        <p class="text-short">
+                            我們採用一頁式網頁版面，讓每個區塊連貫串聯，且有趣其中加入了一些動畫視覺效果，持續給使用者帶來驚喜感。讓使用者能夠充分享受這趟愉快的故事旅程，每一頁都充滿樂趣和互動的機會。
                         </p>
                     </div>
                     <div class="model-pic">
@@ -211,6 +214,11 @@
                             滑鼠追蹤的設計旨在縮短網頁與使用者之間的距離，通過滑鼠移動即時反饋，增添互動性和趣味。</br>
                             同時，滾動式互動強調網頁的連貫性，通過垂直滾動，每個部分根據使用者的滾動動作而調整呈現速度，使使用者感覺自己參與到一個連貫的故事中，而不僅僅是簡單地瀏覽頁面。
                         </p>
+                        <p class="text-short">
+                            設計方向是建立一個引發高參與度的互動
+                            式網頁體驗。</br>
+                            兩個關鍵元素為「滑鼠追蹤」和「滾動式互動」，使使用者感覺置身到一個連貫的故事中，而不僅僅是簡單地瀏覽頁面。
+                        </p>
                     </div>
                 </div>
                 <div class="card-m model" data-aos="fade-up" data-aos-duration="1000"
@@ -223,6 +231,9 @@
                             教室，增加趣味性並激發點選互動的意願。</br>
                             最後，我們加入多個角色模型，讓他貼近設計者，賦予模型個性風
                             格，進而產生對於設計者的好奇心。
+                        </p>
+                        <p class="text-short">
+                            我們的模型設計以圓潤的造型創建一個親切且可愛的效果，讓使用者感到親民，並引入互動式的動畫元件，讓使用者能像玩遊一樣探索教室，增加趣味性並激發點選互動的意願。
                         </p>
                     </div>
                     <div class="model-pic">
@@ -276,14 +287,14 @@
                     width="905" height="562" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
             </div>
         </section>
-        <div id="myBtn" class="totop" onclick="topFunction()">
+        <a href="#explore" id="myBtn" class="totop">
             <span class="text">回到教室</span>
 
             <span><svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
                     <path
                         d="M3.875 27.1253V21.9587H13.5625C16.0554 21.9587 18.0833 19.9307 18.0833 17.4378V14.2087H12.9167L20.6667 5.16699L28.4167 14.2087H23.25V17.4378C23.25 22.7853 18.91 27.1253 13.5625 27.1253H3.875Z" />
                 </svg></span>
-        </div>
+        </a>
         <section id="footer">
             <a class="btn-link" href="#intro">引言</a>
             <a class="btn-link" href="#explore">探索723教室</a>
@@ -295,6 +306,18 @@
 
     <!-- 滑鼠追蹤 -->
     <script>
+
+        const mouseCircle = document.querySelector("#mouse-circle");
+        //滾輪
+        window.addEventListener("wheel", (evt) => {
+            const x = evt.pageX;
+            const y = evt.pageY;
+            mouseCircle.style["left"] = x + "px";
+            mouseCircle.style["top"] = y + "px";
+        });
+
+
+
         window.addEventListener("mousemove", (evt) => {
             const x = evt.pageX;
             const y = evt.pageY;
@@ -305,7 +328,6 @@
             const ying = document.querySelector("#avatar-ying");
             const rong = document.querySelector("#avatar-rong");
             const aboutUs = document.querySelector("#aboutUs");
-            const mouseCircle = document.querySelector("#mouse-circle");
             mouseCircle.style["left"] = x + "px";
             mouseCircle.style["top"] = y + "px";
 
@@ -427,211 +449,6 @@
 
     </script>
 
-    <!-- 更新的版本 -->
-    <!-- <script type="module">
-        import * as THREE from 'three';
-        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-
-        //場景生成
-        const scene = new THREE.Scene();
-
-        //加入燈光
-        const light = new THREE.AmbientLight(0x404040, 50);
-        scene.add(light);
-
-        //攝影機生成
-        const camera = new THREE.PerspectiveCamera(75, 1280 / 720, 0.1, 5000);
-
-        //渲染器生成
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(1280, 720);
-        document.getElementById('gamebox').appendChild(renderer.domElement);
-
-        //設定背景色
-        const color = new THREE.Color(0xeeeeee);
-
-        //動畫變數宣告(承接後func的就可以用)
-        let mixer;
-        let clips = [];
-        let flag = 0;
-        let alertflag = 0;
-
-
-        //模型生成
-        const loader = new GLTFLoader();
-        //上傳模型
-        loader.load(
-            // resource URL
-            './model/723classroom04.gltf',
-            // called when the resource is loaded
-            function (gltf) {
-
-                const model = gltf.scene
-                scene.add(model);
-                //動畫的部分
-                mixer = new THREE.AnimationMixer(model);
-                clips = gltf.animations;
-                console.dir(clips);
-
-                // clips.forEach(function (clip) {
-                //     const action = mixer.clipAction(clip);
-                //     action.play();
-                // });
-
-                gltf.animations; // Array<THREE.AnimationClip>
-                gltf.scene; // THREE.Group
-                gltf.scenes; // Array<THREE.Group>
-                gltf.cameras; // Array<THREE.Camera>
-                gltf.asset; // Object
-
-            },
-            // called while loading is progressing
-            function (xhr) {
-
-                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-
-            },
-            // called when loading has errors
-            function (error) {
-
-                console.log('An error happened');
-
-            }
-        );
-
-        //針對播放的動畫
-        function flagFunc() {
-            if (flag === 1) {
-                console.log('電風扇');
-
-                let fanClips = clips.filter(clip => clip.name.includes('電風扇'));
-
-                fanClips.forEach(function (clip) {
-                    const action = mixer.clipAction(clip);
-                    action.play();
-                });
-
-                //重新渲染畫面
-                animate();
-            } else if (flag === 2) {
-                console.log('椅子');
-                let chairClips = clips.filter(clip => clip.name.includes('椅子'));
-
-                chairClips.forEach(function (clip) {
-                    const action = mixer.clipAction(clip);
-                    action.play();
-                });
-
-                //重新渲染畫面
-                animate();
-            } else if (flag === 3) {
-                console.log('監視器');
-                let monitorClips = clips.filter(clip => clip.name.includes('監視器'));
-                monitorClips.forEach(function (clip) {
-                    const action = mixer.clipAction(clip);
-                    action.play();
-                });
-            } else {
-                flag = 0;
-                animate();
-            }
-        }
-        //彈跳視窗物件
-        function alertFunc(){
-            if(alertflag === 1){
-                console.log('白板');
-                Swal.fire({
-                    title: '<strong>想與我們說些什麼嗎？</strong>',
-                    footer: '<a class="alert" href="#message">留言去</a>',
-                    icon: 'warning',
-                    showCloseButton: true,
-                    showConfirmButton: false,
-                    showCancelButton: false,
-                });
-            }else{
-                alertflag = 0;
-            }
-        }
-
-        scene.background = color;
-        //攝影機位置
-        camera.position.set(3, 3, 3);
-
-
-        //設置時鐘
-        const clock = new THREE.Clock();
-        console.dir(clock);
-
-        //重複更新渲染畫面
-        function animate() {
-            requestAnimationFrame(animate);
-            if (mixer) mixer.update(clock.getDelta());
-            renderer.render(scene, camera);
-        }
-
-        animate();
-
-        //raycaster使用
-        const raycaster = new THREE.Raycaster();
-        const pointer = new THREE.Vector2();
-        const gamebox = document.querySelector("#gamebox canvas");
-        console.dir(gamebox);
-
-        //抓滑鼠位置
-        function onclick(event) {
-            pointer.x = (event.offsetX / gamebox.offsetWidth) * 2 - 1;
-            pointer.y = - (event.offsetY / gamebox.offsetHeight) * 2 + 1;
-
-
-            // 用攝影機更新射線
-            raycaster.setFromCamera(pointer, camera);
-
-            // 計算焦點
-            const intersects = raycaster.intersectObjects(scene.children);
-
-            // console.log(intersects[0].object.name);
-            if (intersects[0].object.name.includes('電風扇')) {
-                flag = 1;
-                flagFunc();
-            } else if (intersects[0].object.name.includes('椅子上半部')) {
-                flag = 2;
-                flagFunc();
-            } else if (intersects[0].object.name.includes('監視器')) {
-                flag = 3;
-                flagFunc();
-            }else if(intersects[0].object.name.includes('白板')){
-                alertflag =1;
-                alertFunc();
-            }else {
-                console.log('nothing');
-                console.log(intersects[0].object.name);
-                flag = 0;
-                flagFunc();
-            };
-
-            // if (intersects[0].object.name == '') {
-            //     console.log(intersects[1].object.name)
-            // } else {
-            //     console.log(intersects[0].object.name)
-            // };
-
-            // if (intersects.length > 0) {
-            //     var arrow = new THREE.ArrowHelper(raycaster.ray.direction, raycaster.ray.origin, 8, 0xff0000);
-            //     scene.add(arrow);
-            // };
-        }
-
-        //滑鼠監聽事件
-        window.addEventListener('click', onclick);
-
-        //滑鼠轉動模型
-        const controls = new OrbitControls(camera, renderer.domElement);
-
-    </script> -->
-
-
-
     <!-- SCROLL UP -->
     <script>
         let mybutton = document.getElementById("myBtn");
@@ -642,18 +459,6 @@
                 mybutton.style.display = "block";
             } else {
                 mybutton.style.display = "none";
-            }
-        }
-
-        mybutton.addEventListener("click", scrollToExploreSection);
-
-        function scrollToExploreSection() {
-            const exploreSection = document.getElementById("explore");
-            if (exploreSection) {
-                window.scrollTo({
-                    top: exploreSection.offsetTop,
-                    behavior: "smooth"
-                });
             }
         }
     </script>
