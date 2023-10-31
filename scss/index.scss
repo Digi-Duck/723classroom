@@ -448,6 +448,7 @@ html {
             .title {
                 font-size: 80px;
                 position: relative;
+                font-weight: bold;
 
                 svg {
                     position: absolute;
@@ -474,8 +475,60 @@ html {
             line-height: 70px;
             font-size: 28px;
             color: #F7F7F7;
-            padding: 0px 60px;
+            text-align: center;
             cursor: pointer;
+        }
+        .btn-start:hover{
+            box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    #explore{
+        .gamebox{
+            .mask{
+                .title{
+                    font-size: 60px;
+                }
+                .text {
+                    font-size: 20px;
+                }
+                .btn-start{
+                    width: 150px;
+                    height: 60px;
+                    line-height: 60px;
+                    margin-top: unset;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 600px) {
+    #explore{
+        .gamebox{
+            .mask{
+                gap: 20px;
+                .title{
+                    font-size: 48px;
+                    svg{
+                        right:-20%;
+                        bottom:-60%;
+                    }
+                }
+                .text {
+                    font-size: 16px;
+                }
+                .btn-start{
+                    font-size: 20px;
+                    width: 120px;
+                    height: 40px;
+                    line-height: 40px;
+                    margin-top: unset;
+                }
+            }
         }
     }
 }
@@ -671,7 +724,8 @@ html {
                     width: 80%;
 
                     .plan-pic-s {
-                        width: 500px;
+                        width: 100%;
+                        max-width: 530px;
                         height: 420px;
                         display: block;
                     }
@@ -699,23 +753,6 @@ html {
             }
         }
     }
-
-    // .webStory {
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: #88ACFF;
-    //     position: relative;
-    //     text-align: center;
-
-    //     .storyRoad {
-    //         display: inline-block;
-    //         position: absolute;
-    //         top: 0;
-    //         left: 50%;
-    //         height: 100%;
-    //         transform: translateX(-50%);
-    //     }
-    // }
 }
 
 
@@ -771,6 +808,7 @@ html {
 
             .title {
                 font-size: 40px;
+                font-weight: bold;
             }
 
             p {
@@ -905,9 +943,34 @@ html {
         }
     }
 }
+
+@media (max-width: 415px){
+    #introduce .webStory {
+        height: 800px;
+        padding: 0px 20px;
+        gap:10%;
+        .card-m{
+            gap: 10px;
+            .model-pic {
+                width: 100px;
+                height:100px;
+                min-width: 100px;
+                min-height: 100px;
+            }
+            .text-area{
+                height: 100px;
+                .title{
+                    font-size: 18px;
+                }
+                .text-short{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
 @media (max-width: 375px){
     #introduce .webStory {
-        padding: 0px 20px;
         .card-m{
             .model-pic {
                 width: 80px;
@@ -916,12 +979,7 @@ html {
                 min-height: 80px;
             }
             .text-area{
-                .title{
-                    font-size: 18px;
-                }
-                .text-short{
-                    font-size: 12px;
-                }
+                height: 80px;
             }
         }
     }
@@ -1020,6 +1078,87 @@ html {
     }
 }
 
+@media (max-width:992px) {
+    #aboutUs{
+        .title{
+            align-self: flex-start;
+        }
+    }
+}
+
+@media (max-width:680px) {
+    #aboutUs{
+        padding: 80px 40px;
+        .cards-team {
+            margin-top: 100px;
+            gap: 20px;
+        }
+    }
+}
+@media (max-width:576px) {
+    #aboutUs{
+        padding: 50px 20px;
+        .cards-team {
+            margin-top: 80px;
+            gap: 20px;
+        }
+    }
+}
+@media (max-width:480px){
+    #aboutUs{
+        padding: 50px 30px;
+        .title{
+            align-self: flex-start;
+            font-size: 18px;
+        }
+        .cards-team {
+            margin-top: 50px;
+            gap: 45px;
+    
+            .card {
+                width: 120px;
+                height: 160px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+    
+                .pic {
+                    width: 100px;
+                    height: 100px;
+                }
+    
+                .name {
+                    font-size: 12px;
+                }
+    
+                .skill {
+                    font-size: 10px;
+                }
+    
+                .btn-aboutme {
+                    font-size: 10px;
+                    border-radius: 20px;
+                    padding: 8px 13px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:375px){
+    #aboutUs{
+        padding: 50px 20px;
+        .cards-team {
+            gap: 45px;
+    
+            .card {
+                width: 100px;
+                height: 160px;
+            }
+        }
+    }
+}
+
 #message {
     width: 100%;
     height: 807px;
@@ -1027,7 +1166,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 58px;
+    padding: 60px 100px;
 
     .title {
         font-size: 40px;
@@ -1041,6 +1180,14 @@ html {
         overflow: hidden;
     }
 
+}
+
+@media (max-width:992px){
+    #message{
+        .title{
+            align-self: flex-start;
+        }
+    }
 }
 
 .totop {
@@ -1101,7 +1248,7 @@ html {
         align-items: flex-start;
         flex-direction: column;
         gap: 20px;
-        padding: 50px 180px;
+        padding: 50px 100px;
     
         .btn-link {
             padding: 20px;
