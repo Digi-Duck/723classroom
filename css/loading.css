@@ -1,0 +1,73 @@
+#loader {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFF5D6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.load-pic {
+    display: flex;
+}
+
+.img-chen {
+    animation: show-up 2s infinite;
+    opacity: 0;
+}
+
+.img-tong {
+    animation: show-up 2s .5s infinite;
+    opacity: 0;
+}
+
+.img-ying {
+    animation: show-up 2s 1s infinite;
+    opacity: 0;
+}
+
+.img-rong {
+    animation: show-up 2s 1.5s infinite;
+    opacity: 0;
+}
+
+@keyframes show-up {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.load-text {
+    border-right: 5px solid #FF9855;
+    width: 0;
+    height: 85px;
+    font-size: 80px;
+    color: #FF9855;
+    font-family: 'Nikumaru Font';
+    overflow: hidden;
+    animation: loading 2s infinite alternate;
+}
+
+@keyframes loading {
+    100% {
+        width: 60%;
+    }
+}
