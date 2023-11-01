@@ -583,13 +583,11 @@ html {
                 }
 
                 .btn-more {
-                    width: 145px;
-                    height: 40px;
+                    padding: 10px 30px;
                     background-color: #88ACFF;
                     border-radius: 60px;
                     margin-top: 80px;
-                    font-size: 15px;
-                    line-height: 40px;
+                    font-size: 18px;
                     text-align: center;
                     color: #F7F7F7;
                     cursor: pointer;
@@ -604,7 +602,6 @@ html {
                 width: 50%;
                 min-width: 490px;
                 height: 683px;
-                // background-color: #aaa;
                 background-image: url(../picture/planpic.png);
                 background-position: 60% center;
                 background-repeat: no-repeat;
@@ -714,6 +711,8 @@ html {
     @media (max-width: 992px) {
         .plan {
             .plan-top {
+                padding: 50px 40px;
+                justify-content: flex-start;
                 .plan-info {
                     margin: unset;
 
@@ -724,15 +723,17 @@ html {
                     width: 80%;
 
                     .plan-pic-s {
+                        margin: unset;
                         width: 100%;
                         max-width: 530px;
                         height: 420px;
                         display: block;
+                        transform:translateX(20%);
                     }
 
                     .text01 {
                         width: 100%;
-                        margin-top: 40px;
+                        margin-top: unset;
                         line-height: 1.2;
                     }
 
@@ -750,6 +751,33 @@ html {
                 .plan-pic {
                     display: none;
                 }
+            }
+        }
+    }
+    @media (max-width: 480px){
+        .plan{
+            .plan-top{
+                .plan-info{
+                    .title{
+                        font-size: 18px;
+                    }
+                    .text01 {
+                        font-size: 25px;
+                    }
+                    .text02{
+                        font-size: 15px;
+                    }
+                    .btn-more {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 375px){
+        .plan{
+            .plan-top{
+                padding: 50px 20px;
             }
         }
     }
@@ -1139,7 +1167,7 @@ html {
                 .btn-aboutme {
                     font-size: 10px;
                     border-radius: 20px;
-                    padding: 8px 13px;
+                    padding: 5px 8px;
                 }
             }
         }
@@ -1195,9 +1223,9 @@ html {
     }
 }
 
-@media (max-width:580px){
+@media (max-width:680px){
     #message{
-        padding: 60px 50px;
+        padding: 60px 40px;
     }
 }
 @media (max-width:480px){
@@ -1219,7 +1247,6 @@ html {
 
 .totop {
     background-color: #FF9855;
-    width: 190px;
     position: fixed;
     right: 3%;
     bottom: 3%;
@@ -1228,10 +1255,12 @@ html {
     border-radius: 40px;
     color: #F7F7F7;
     font-size: 30px;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
     display: none;
     text-decoration: none;
+    justify-content: center;
+    align-items: center;
 
     svg {
         fill: #F7F7F7;
@@ -1245,6 +1274,21 @@ html {
 
     svg {
         fill: #FF9855;
+    }
+}
+@media (max-width:768px) {
+    .totop{
+        font-size: 24px;
+    }
+}
+@media (max-width:576px) {
+    .totop{
+        font-size: 18px;
+        padding: 5px 10px;
+        svg {
+            width: 15px;
+            height: 15px;
+        }
     }
 }
 
@@ -1279,9 +1323,11 @@ html {
     
         .btn-link {
             padding: 20px;
-            font-size: 18px;
-            color: #000;
-            text-decoration: none;
         }
+    }
+}
+@media (max-width:680px){
+    #footer {
+        padding: 50px 40px;
     }
 }
