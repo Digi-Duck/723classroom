@@ -915,20 +915,24 @@ html {
             display: inline-block;
             position: absolute;
             top: 0;
-            left: 10%;
+            left: 7%;
             height: 100%;
             transform: translateX(-50%);
+            stroke-width: 80px;
         }
     }
 }
 @media (max-width: 992px){
     #introduce .webStory {
         padding: 0px 80px;
+        .storyRoad-straight {
+            left: 5%;
+            stroke-width: 50px;
+        }
     }
 }
 @media (max-width: 768px){
     #introduce .webStory {
-        padding: 0px 40px;
         .card-m{
             .model-pic {
                 width: 200px;
@@ -950,11 +954,14 @@ html {
                 }
             }
         }
+        .storyRoad-straight {
+            left: 6%;
+        }
     }
 }
 @media (max-width: 576px){
     #introduce .webStory {
-        padding: 0px 20px;
+        padding: 0px 60px;
         .card-m {
             gap: 20px;
             .text-area{
@@ -969,15 +976,20 @@ html {
                 min-height: 150px;
             }
         }
+        .storyRoad-straight{
+            left:6%;
+            stroke-width: 40px;
+        }
     }
 }
 
-@media (max-width: 415px){
+@media (max-width: 480px){
     #introduce .webStory {
         height: 800px;
-        padding: 0px 20px;
+        padding: 0px 40px;
         gap:10%;
         .card-m{
+            margin-left: 20px;
             gap: 10px;
             .model-pic {
                 width: 100px;
