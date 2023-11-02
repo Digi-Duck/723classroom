@@ -241,43 +241,43 @@ function mouseMove(event) {
     raycaster.setFromCamera(pointer, camera);
     const intersects = raycaster.intersectObjects(scene.children);
     if (intersects[0].object.name.includes('fan01')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('fan02')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('chair_Action_1')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('Audio')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('projection')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     }else if (intersects[0].object.name.includes('cellphone')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('Computer_host_controllable')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('air_conditioner01')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('air_conditioner02')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('curtains01')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('curtains02')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('curtains03')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     }else if (intersects[0].object.name.includes('whiteboard')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes("Teacher's_computer")) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('rong')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('chen')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('ying')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('tong')) {
-        document.getElementById('gamebox').style.cursor = 'pointer';
+        gamebox.style.cursor = 'pointer';
     } else {
-        document.getElementById('gamebox').style.cursor = 'default';
+        gamebox.style.cursor = 'default';
     }
 }
 
@@ -354,6 +354,7 @@ let curtainPlay01 = true;
 let curtainPlay02 = true;
 let curtainPlay03 = true;
 
+//滑鼠點擊後動畫物件
 function flagFunc() {
     if (flag === 1) {
         let fanClips = clips.filter(clip => clip.name.includes('fan01'));
