@@ -334,7 +334,6 @@
 
     <!-- 滑鼠追蹤 -->
     <script>
-
         const mouseCircle = document.querySelector("#mouse-circle");
         //滾輪
         window.addEventListener("wheel", (evt) => {
@@ -343,8 +342,6 @@
             mouseCircle.style["left"] = x + "px";
             mouseCircle.style["top"] = y + "px";
         });
-
-
 
         window.addEventListener("mousemove", (evt) => {
             const x = evt.pageX;
@@ -359,6 +356,12 @@
             mouseCircle.style["left"] = x + "px";
             mouseCircle.style["top"] = y + "px";
 
+            const intro = document.querySelector("#intro");
+            const explore = document.querySelector("#explore");
+            const introduce = document.querySelector("#introduce");
+            //上面的高度
+            const topHeight = intro.offsetHeight + explore.offsetHeight + introduce.offsetHeight;
+
             if (x < (aboutUs.offsetWidth) / 2 - 50) {
                 // console.log("left");
                 chen.src = "./picture/avatar/01-chen/chen-left.png";
@@ -371,16 +374,21 @@
                 tong.src = "./picture/avatar/02-tong/tong-right.png";
                 ying.src = "./picture/avatar/03-ying/ying-right.png";
                 rong.src = "./picture/avatar/04-rong/rong-right.png";
-            } else if (y > (aboutUs.offsetHeight) / 2) {
+            } else if (y < (topHeight + (aboutUs.offsetHeight) / 2 - 50)) {
                 chen.src = "./picture/avatar/01-chen/chen-top.png";
                 tong.src = "./picture/avatar/02-tong/tong-top.png";
                 ying.src = "./picture/avatar/03-ying/ying-top.png";
                 rong.src = "./picture/avatar/04-rong/rong-top.png";
-            } else {
+            }else if(y > (topHeight + (aboutUs.offsetHeight) / 2 + 50)){
                 chen.src = "./picture/avatar/01-chen/chen-down.png";
                 tong.src = "./picture/avatar/02-tong/tong-down.png";
                 ying.src = "./picture/avatar/03-ying/ying-down.png";
                 rong.src = "./picture/avatar/04-rong/rong-down.png";
+            } else {
+                chen.src = "./picture/avatar/01-chen/chen-front.png";
+                tong.src = "./picture/avatar/02-tong/tong-front.png";
+                ying.src = "./picture/avatar/03-ying/ying-front.png";
+                rong.src = "./picture/avatar/04-rong/rong-front.png";
             }
         })
     </script>
