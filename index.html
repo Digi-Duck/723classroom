@@ -13,7 +13,17 @@
     <!-- aos套件 -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        .container{
+        .container {
+            display: none;
+        }
+        .btn-close{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            bottom: 2%;
+            transform: translateX(-50%);
+            cursor: pointer;
             display: none;
         }
         .alert {
@@ -137,6 +147,24 @@
                         </div>
                         <div class="btn-start">START</div>
                     </div>
+                    <svg class="btn-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 96" fill="none">
+                        <g clip-path="url(#clip0_428_3523)">
+                            <path
+                                d="M100.833 47.9417L89.65 35.2L91.2083 18.3333L74.6625 14.575L66 0L50.4167 6.69167L34.8333 0L26.1708 14.575L9.625 18.2875L11.1833 35.1542L0 47.9417L11.1833 60.6833L9.625 77.5958L26.1708 81.3542L34.8333 95.9292L50.4167 89.1917L66 95.8833L74.6625 81.3083L91.2083 77.55L89.65 60.6833L100.833 47.9417Z"
+                                fill="#FF9855" />
+                            <path
+                                d="M62.2237 57.6925L40.3034 35.7722C39.3271 34.7959 37.7442 34.7959 36.7679 35.7722C35.7916 36.7485 35.7916 38.3314 36.7679 39.3077L58.6882 61.228C59.6645 62.2043 61.2474 62.2043 62.2237 61.228C63.2 60.2517 63.2 58.6688 62.2237 57.6925Z"
+                                fill="white" />
+                            <path
+                                d="M59.1842 35.768L37.2639 57.6883C36.2875 58.6647 36.2875 60.2476 37.2639 61.2239C38.2402 62.2002 39.8231 62.2002 40.7994 61.2239L62.7197 39.3036C63.696 38.3273 63.696 36.7443 62.7197 35.768C61.7434 34.7917 60.1605 34.7917 59.1842 35.768Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_428_3523">
+                                <rect width="101" height="96" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
                 </div>
             </section>
             <section id="introduce">
@@ -385,8 +413,17 @@
         let startBtn = document.querySelector(".btn-start");
         let mask = document.querySelector(".mask");
         // console.log(mask);
+        let closeBtn = document.querySelector(".btn-close");
+        console.dir(startBtn);
+
         startBtn.addEventListener("click", () => {
             mask.classList.add('mask-none');
+            closeBtn.style.display = 'block';
+        })
+        closeBtn.addEventListener("click", () => {
+            mask.classList.remove('mask-none');
+            closeBtn.style.display = 'none';
+            startBtn.innerText = 'Continue';
         })
     </script>
 
