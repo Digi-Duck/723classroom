@@ -894,6 +894,7 @@ html {
   background-color: #88ACFF;
   color: #F7F7F7;
   cursor: pointer;
+  text-decoration: none;
 }
 #aboutUs .cards-team .card .btn-aboutme:hover {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
