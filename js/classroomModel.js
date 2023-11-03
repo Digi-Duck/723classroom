@@ -32,7 +32,7 @@ const loader = new GLTFLoader();
 //上傳模型
 loader.load(
     // resource URL
-    '../model/723classroom10.gltf',
+    '../model/723classroom11.gltf',
     // called when the resource is loaded
     function (gltf) {
 
