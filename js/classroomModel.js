@@ -32,7 +32,8 @@ const loader = new GLTFLoader();
 //上傳模型
 loader.load(
     // resource URL
-    '../model/723classroom11.gltf',
+    '../model/723classroom12.gltf',
+
     // called when the resource is loaded
     function (gltf) {
         const model = gltf.scene
@@ -164,7 +165,7 @@ function onclick(event) {
     } else if (intersects[0].object.name.includes('fan02')) {
         flag = 2;
         flagFunc();
-    } else if (intersects[0].object.name.includes('chair_Action_1')) {
+    } else if (intersects[0].object.name.includes('chair_Action_2')) {
         flag = 3;
         flagFunc();
     } else if (intersects[0].object.name.includes('Audio')) {
