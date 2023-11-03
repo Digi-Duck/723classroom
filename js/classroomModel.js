@@ -281,8 +281,8 @@ function mouseMove(event) {
 }
 
 //滑鼠監聽事件
-window.addEventListener('click', onclick);
-window.addEventListener('mousemove',mouseMove);
+gamebox.addEventListener('click', onclick);
+gamebox.addEventListener('mousemove',mouseMove);
 
 //滑鼠點擊後彈跳視窗物件
 function alertFunc() {
