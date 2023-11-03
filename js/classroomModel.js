@@ -126,6 +126,7 @@ function animate() {
     requestAnimationFrame(animate);
     if (mixer) mixer.update(clock.getDelta());
     renderer.render(scene, camera);
+    // controls.update(scene, camera);
 }
 
 animate();
@@ -521,4 +522,5 @@ function flagFunc() {
 
 //滑鼠轉動模型
 const controls = new OrbitControls(camera, renderer.domElement);
+controls.autoRotateSpeed = 1.0;
 
