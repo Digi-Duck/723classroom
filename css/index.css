@@ -110,6 +110,18 @@ html {
   color: #FF9855;
 }
 
+@media (max-width: 1450px) {
+  .list {
+    height: 100vh;
+  }
+  .list .lists {
+    margin-top: 200px;
+  }
+  .list .lists a {
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+}
 @media (max-width: 1200px) {
   .list {
     height: 100vh;

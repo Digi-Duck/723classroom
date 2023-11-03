@@ -132,6 +132,19 @@ html {
     }
 
 }
+@media (max-width: 1450px) {
+    .list {
+        height: 100vh;
+
+        .lists {
+            margin-top: 200px;
+            a {
+                font-size: 30px;
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
 
 @media (max-width: 1200px) {
     .list {
@@ -149,6 +162,7 @@ html {
         }
     }
 }
+
 
 @media (max-width: 576px) {
     .list {
