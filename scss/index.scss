@@ -472,6 +472,24 @@ html {
                 font-size: 25px;
             }
         }
+        .btn-close{
+            width: 60px;
+            height: 60px;
+            path{
+                fill:#88ACFF;
+            }
+            rect{
+                fill:white;
+            }
+        }
+        .btn-close:hover{
+            path{
+                fill:white;
+            }
+            rect{
+                fill:#88ACFF;
+            }
+        }
 
         .mask-none {
             display: none;

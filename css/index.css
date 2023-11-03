@@ -387,6 +387,22 @@ html {
 #explore .gamebox .mask .text {
   font-size: 25px;
 }
+#explore .gamebox .btn-close {
+  width: 60px;
+  height: 60px;
+}
+#explore .gamebox .btn-close path {
+  fill: #88ACFF;
+}
+#explore .gamebox .btn-close rect {
+  fill: white;
+}
+#explore .gamebox .btn-close:hover path {
+  fill: white;
+}
+#explore .gamebox .btn-close:hover rect {
+  fill: #88ACFF;
+}
 #explore .gamebox .mask-none {
   display: none;
 }

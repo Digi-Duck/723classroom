@@ -16,7 +16,8 @@
         .container {
             display: none;
         }
-        .btn-close{
+
+        .btn-close {
             width: 100px;
             height: 100px;
             position: absolute;
@@ -26,6 +27,7 @@
             cursor: pointer;
             display: none;
         }
+
         .alert {
             text-decoration: none;
             padding: 10px 20px;
@@ -147,23 +149,11 @@
                         </div>
                         <div class="btn-start">START</div>
                     </div>
-                    <svg class="btn-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 96" fill="none">
-                        <g clip-path="url(#clip0_428_3523)">
-                            <path
-                                d="M100.833 47.9417L89.65 35.2L91.2083 18.3333L74.6625 14.575L66 0L50.4167 6.69167L34.8333 0L26.1708 14.575L9.625 18.2875L11.1833 35.1542L0 47.9417L11.1833 60.6833L9.625 77.5958L26.1708 81.3542L34.8333 95.9292L50.4167 89.1917L66 95.8833L74.6625 81.3083L91.2083 77.55L89.65 60.6833L100.833 47.9417Z"
-                                fill="#88ACFF" />
-                            <path
-                                d="M62.2237 57.6925L40.3034 35.7722C39.3271 34.7959 37.7442 34.7959 36.7679 35.7722C35.7916 36.7485 35.7916 38.3314 36.7679 39.3077L58.6882 61.228C59.6645 62.2043 61.2474 62.2043 62.2237 61.228C63.2 60.2517 63.2 58.6688 62.2237 57.6925Z"
-                                fill="white" />
-                            <path
-                                d="M59.1842 35.768L37.2639 57.6883C36.2875 58.6647 36.2875 60.2476 37.2639 61.2239C38.2402 62.2002 39.8231 62.2002 40.7994 61.2239L62.7197 39.3036C63.696 38.3273 63.696 36.7443 62.7197 35.768C61.7434 34.7917 60.1605 34.7917 59.1842 35.768Z"
-                                fill="white" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_428_3523">
-                                <rect width="101" height="96" fill="white" />
-                            </clipPath>
-                        </defs>
+                    <svg class="btn-close" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <rect x="8" y="13" width="43" height="34" />
+                        <path
+                            d="M9.15865 51.5786C6.29334 48.8112 4.00787 45.5009 2.4356 41.8408C0.863334 38.1807 0.0357472 34.2441 0.0011327 30.2607C-0.0334818 26.2773 0.725569 22.3269 2.234 18.64C3.74242 14.9531 5.97002 11.6036 8.7868 8.7868C11.6036 5.97002 14.9531 3.74242 18.64 2.234C22.3269 0.725569 26.2773 -0.0334818 30.2607 0.0011327C34.2441 0.0357472 38.1807 0.863334 41.8408 2.4356C45.5009 4.00787 48.8112 6.29334 51.5786 9.15865C57.0434 14.8167 60.0672 22.3948 59.9989 30.2607C59.9305 38.1266 56.7754 45.651 51.2132 51.2132C45.651 56.7754 38.1266 59.9305 30.2607 59.9989C22.3948 60.0672 14.8167 57.0434 9.15865 51.5786ZM21.3686 18.3686V42.3686H27.3686V18.3686H21.3686ZM33.3686 18.3686V42.3686H39.3686V18.3686H33.3686Z" />
                     </svg>
                 </div>
             </section>
@@ -302,7 +292,8 @@
                         </div>
                         <div class="name">周慶龍</div>
                         <div class="skill">3D模型設計</div>
-                        <a href="https://drive.google.com/file/d/1ZpPHTT_oSnIJ7cTCJ-SK0koMlwbpSGzu/view?usp=sharing" class="btn-aboutme" target="_blank">About Me</a>
+                        <a href="https://drive.google.com/file/d/1ZpPHTT_oSnIJ7cTCJ-SK0koMlwbpSGzu/view?usp=sharing"
+                            class="btn-aboutme" target="_blank">About Me</a>
                     </div>
                 </div>
             </section>
@@ -337,11 +328,34 @@
         const listLink = document.querySelectorAll(".lists a");
         const hamswitch = document.querySelector("#ham-switch");
         console.dir(hamswitch);
-        listLink.forEach( (a) => {
-            a.addEventListener("click",()=>{
+        listLink.forEach((a) => {
+            a.addEventListener("click", () => {
                 hamswitch.checked = false;
             })
         })
+    </script>
+
+
+    <!-- 偵測是否為行動裝置 -->
+    <script>
+        detectmob();
+        function detectmob() {
+            if (navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+            ) {
+                console.log('ismobile');
+                const mouseCircle = document.querySelector("#mouse-circle");
+                mouseCircle.style.display = 'none';
+            }
+            else {
+                console.log('notmobile');
+            }
+        }
     </script>
 
     <!-- 滑鼠追蹤 -->
@@ -391,7 +405,7 @@
                 tong.src = "./picture/avatar/02-tong/tong-top.png";
                 ying.src = "./picture/avatar/03-ying/ying-top.png";
                 rong.src = "./picture/avatar/04-rong/rong-top.png";
-            }else if(y > (topHeight + (aboutUs.offsetHeight) / 2 + 50)){
+            } else if (y > (topHeight + (aboutUs.offsetHeight) / 2 + 50)) {
                 chen.src = "./picture/avatar/01-chen/chen-down.png";
                 tong.src = "./picture/avatar/02-tong/tong-down.png";
                 ying.src = "./picture/avatar/03-ying/ying-down.png";
