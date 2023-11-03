@@ -244,7 +244,7 @@ function mouseMove(event) {
         gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('fan02')) {
         gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('chair_Action_1')) {
+    } else if (intersects[0].object.name.includes('chair_Action_2')) {
         gamebox.style.cursor = 'pointer';
     } else if (intersects[0].object.name.includes('Audio')) {
         gamebox.style.cursor = 'pointer';
