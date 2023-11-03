@@ -35,7 +35,6 @@ loader.load(
     '../model/723classroom11.gltf',
     // called when the resource is loaded
     function (gltf) {
-
         const model = gltf.scene
         scene.add(model);
         //動畫的部分

@@ -79,7 +79,7 @@
                         </defs>
                     </svg>
                 </label>
-                <div class="list">
+                <div class="list" id="list">
                     <div class="lists">
                         <a href="#intro">引言</a>
                         <a href="#explore">探索723教室</a>
@@ -151,7 +151,7 @@
                         <g clip-path="url(#clip0_428_3523)">
                             <path
                                 d="M100.833 47.9417L89.65 35.2L91.2083 18.3333L74.6625 14.575L66 0L50.4167 6.69167L34.8333 0L26.1708 14.575L9.625 18.2875L11.1833 35.1542L0 47.9417L11.1833 60.6833L9.625 77.5958L26.1708 81.3542L34.8333 95.9292L50.4167 89.1917L66 95.8833L74.6625 81.3083L91.2083 77.55L89.65 60.6833L100.833 47.9417Z"
-                                fill="#FF9855" />
+                                fill="#88ACFF" />
                             <path
                                 d="M62.2237 57.6925L40.3034 35.7722C39.3271 34.7959 37.7442 34.7959 36.7679 35.7722C35.7916 36.7485 35.7916 38.3314 36.7679 39.3077L58.6882 61.228C59.6645 62.2043 61.2474 62.2043 62.2237 61.228C63.2 60.2517 63.2 58.6688 62.2237 57.6925Z"
                                 fill="white" />
@@ -332,6 +332,18 @@
         </div>
     </div>
 
+    <!-- 漢堡選單要消失 -->
+    <script>
+        const listLink = document.querySelectorAll(".lists a");
+        const hamswitch = document.querySelector("#ham-switch");
+        console.dir(hamswitch);
+        listLink.forEach( (a) => {
+            a.addEventListener("click",()=>{
+                hamswitch.checked = false;
+            })
+        })
+    </script>
+
     <!-- 滑鼠追蹤 -->
     <script>
         const mouseCircle = document.querySelector("#mouse-circle");
@@ -446,7 +458,7 @@
         }
     </script>
     <!-- 教室模型 -->
-    <script type="module" src="./js/classroomModel.js"></script>
+    <!-- <script type="module" src="./js/classroomModel.js"></script> -->
     <!-- <script type="module" src="./js/classroomModelTest.js"></script> -->
 
     <!-- 偵測位置 出現回到教室按鈕 -->
