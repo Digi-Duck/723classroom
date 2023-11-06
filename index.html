@@ -187,7 +187,7 @@
 
                     <svg class="storyRoad-straight" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 1300"
                         fill="none" preserveAspectRatio="none">
-                        <path class="theRoad-s" d="M50 0V1300" stroke="#EAEEF4" />
+                        <path class="theRoad-s" d="M50 0V1300" stroke="#EAEEF4"/>
                     </svg>
                     <div class="card-m concept" data-aos="fade-up" data-aos-duration="1000"
                         data-aos-anchor-placement="top-center">
@@ -422,7 +422,7 @@
         var myVar;
 
         function loadingFunc() {
-            myVar = setTimeout(showPage, 3000);
+            myVar = setTimeout(showPage, 5000);
         }
 
         function showPage() {
@@ -432,13 +432,16 @@
     </script>
     <!-- 引入sweetalert套件 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- 引入滾動路線js -->
+    <script src="./js/scrollRoad.js"></script>
+
     <!-- aosjs套件 -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <!-- 引入滾動路線js -->
-    <script src="./js/scrollRoad.js"></script>
+
 
     <!-- mask遮罩及關閉按鈕 -->
     <script>

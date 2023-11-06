@@ -32,7 +32,7 @@ const loader = new GLTFLoader();
 //上傳模型
 loader.load(
     // resource URL
-    '../model/723classroom12.gltf',
+    '../model/723classroom15.gltf',
 
     // called when the resource is loaded
     function (gltf) {
@@ -120,16 +120,13 @@ camera.position.set(3, 3, 3);
 
 //設置時鐘
 const clock = new THREE.Clock();
-console.dir(clock);
 
 //重複更新渲染畫面
 function animate() {
     requestAnimationFrame(animate);
     if (mixer) mixer.update(clock.getDelta());
     renderer.render(scene, camera);
-    // controls.update(scene, camera);
 }
-
 animate();
 
 //raycaster使用
@@ -523,5 +520,8 @@ function flagFunc() {
 
 //滑鼠轉動模型
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.autoRotateSpeed = 1.0;
+//調整旋轉及平移速度
+controls.rotateSpeed = 0.1;
+controls.panSpeed = 0.2;
+
 
