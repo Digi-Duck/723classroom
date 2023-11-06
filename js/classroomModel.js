@@ -237,44 +237,13 @@ function mouseMove(event) {
     pointer.y = - (event.offsetY / gamebox.offsetHeight) * 2 + 1;
     raycaster.setFromCamera(pointer, camera);
     const intersects = raycaster.intersectObjects(scene.children);
-    if (intersects[0].object.name.includes('fan01')) {
+    const circleMouse = document.querySelector('#mouse-circle');
+    if (intersects[0].object.name.includes('fan01')||intersects[0].object.name.includes('fan02')||intersects[0].object.name.includes('chair_Action_2')||intersects[0].object.name.includes('Audio')||intersects[0].object.name.includes('projection')||intersects[0].object.name.includes('cellphone')||intersects[0].object.name.includes('Computer_host_controllable')||intersects[0].object.name.includes('air_conditioner01')||intersects[0].object.name.includes('air_conditioner02')||intersects[0].object.name.includes('curtains01')||intersects[0].object.name.includes('curtains02')||intersects[0].object.name.includes('curtains03')||intersects[0].object.name.includes('whiteboard')||intersects[0].object.name.includes("Teacher's_computer")||intersects[0].object.name.includes('rong')||intersects[0].object.name.includes('chen')||intersects[0].object.name.includes('ying')||intersects[0].object.name.includes('tong')) {
         gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('fan02')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('chair_Action_2')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('Audio')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('projection')) {
-        gamebox.style.cursor = 'pointer';
-    }else if (intersects[0].object.name.includes('cellphone')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('Computer_host_controllable')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('air_conditioner01')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('air_conditioner02')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('curtains01')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('curtains02')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('curtains03')) {
-        gamebox.style.cursor = 'pointer';
-    }else if (intersects[0].object.name.includes('whiteboard')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes("Teacher's_computer")) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('rong')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('chen')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('ying')) {
-        gamebox.style.cursor = 'pointer';
-    } else if (intersects[0].object.name.includes('tong')) {
-        gamebox.style.cursor = 'pointer';
-    } else {
+        circleMouse.style.border = '10px solid #88ACFF';
+    }else {
         gamebox.style.cursor = 'default';
+        circleMouse.style.border = '10px solid #FF9855';
     }
 }
 

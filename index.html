@@ -151,6 +151,8 @@
                         </div>
                         <div class="text">
                             使用滑鼠操作視角和點擊物件互動
+                        </br>
+                            當鼠標呈現藍色即可互動
                         </div>
                         <div class="btn-start">START</div>
                     </div>
@@ -354,6 +356,8 @@
                 console.log('ismobile');
                 const mouseCircle = document.querySelector("#mouse-circle");
                 mouseCircle.style.display = 'none';
+                const maskText = document.querySelector(".mask .text");
+                maskText.innerText = '使用手指操作視角和點擊物件互動';
             }
             else {
                 console.log('notmobile');
