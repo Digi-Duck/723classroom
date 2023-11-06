@@ -13,10 +13,6 @@
     <!-- aos套件 -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        .container {
-            display: none;
-        }
-
         .btn-close {
             width: 100px;
             height: 100px;
@@ -33,6 +29,15 @@
             padding: 10px 20px;
             background-color: #FF9855;
             color: #fff;
+        }
+
+        .swal2-close {
+            background-color: #FF9855;
+            color: #fff;
+        }
+
+        .swal2-close:focus {
+            box-shadow: unset;
         }
     </style>
 </head>
@@ -187,7 +192,7 @@
 
                     <svg class="storyRoad-straight" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 1300"
                         fill="none" preserveAspectRatio="none">
-                        <path class="theRoad-s" d="M50 0V1300" stroke="#EAEEF4"/>
+                        <path class="theRoad-s" d="M50 0V1300" stroke="#EAEEF4" />
                     </svg>
                     <div class="card-m concept" data-aos="fade-up" data-aos-duration="1000"
                         data-aos-anchor-placement="top-center">
@@ -327,7 +332,6 @@
     <script>
         const listLink = document.querySelectorAll(".lists a");
         const hamswitch = document.querySelector("#ham-switch");
-        console.dir(hamswitch);
         listLink.forEach((a) => {
             a.addEventListener("click", () => {
                 hamswitch.checked = false;
@@ -360,6 +364,10 @@
     <!-- 滑鼠追蹤 -->
     <script>
         const mouseCircle = document.querySelector("#mouse-circle");
+        const gamebox = document.querySelector("#gamebox");
+        console.log(gamebox.offsetTop);
+        console.dir(gamebox);
+
         //滾輪
         window.addEventListener("wheel", (evt) => {
             const x = evt.pageX;
@@ -367,7 +375,7 @@
             mouseCircle.style["left"] = x + "px";
             mouseCircle.style["top"] = y + "px";
         });
-
+        //滑鼠移動
         window.addEventListener("mousemove", (evt) => {
             const x = evt.pageX;
             const y = evt.pageY;
@@ -419,17 +427,19 @@
     </script>
     <!-- loading畫面 -->
     <script>
-        var myVar;
-
-        function loadingFunc() {
-            myVar = setTimeout(showPage, 5000);
+        const loader = document.querySelector('#loader');
+        loader.onmousewheel = function () {
+            return false;
         }
-
+        function loadingFunc(){setTimeout(showPage, 5000)};
         function showPage() {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("container").style.display = "block";
-        }
+            loader.style.display = "none";
+            loader.onmousewheel = function () {
+                return true;
+            }
+        };
     </script>
+
     <!-- 引入sweetalert套件 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -450,7 +460,6 @@
         let mask = document.querySelector(".mask");
         // console.log(mask);
         let closeBtn = document.querySelector(".btn-close");
-        console.dir(startBtn);
 
         startBtn.addEventListener("click", () => {
             mask.classList.add('mask-none');

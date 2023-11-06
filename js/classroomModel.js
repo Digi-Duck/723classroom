@@ -133,7 +133,6 @@ animate();
 const raycaster = new THREE.Raycaster();
 const pointer = new THREE.Vector2();
 const gamebox = document.querySelector("#gamebox canvas");
-console.dir(gamebox);
 
 //音樂
 const audioMusic = document.createElement("audio");
@@ -291,9 +290,14 @@ function alertFunc() {
             title: '<strong>想與我們說些什麼嗎？</strong>',
             footer: '<a class="alert" href="#message">留言去</a>',
             icon: 'warning',
-            // showCloseButton: true,
+            showCloseButton: true,
             showConfirmButton: false,
             showCancelButton: false,
+            allowOutsideClick: false,
+            // closeFocus:false,
+            // focusConfirm:false,
+            // returnFocus:false,
+            // inputAutoFocus:false,
         });
     } else if (alertflag === 2) {
         console.log("teacher's computer");
@@ -301,52 +305,57 @@ function alertFunc() {
             title: '<strong>專屬我們的謬思女神,無數創意在此誕生</strong>',
             footer: '<a class="alert" href="#introduce">創意在此</a>',
             icon: 'warning',
-            // showCloseButton: true,
+            showCloseButton: true,
             showConfirmButton: false,
             showCancelButton: false,
+            allowOutsideClick: false,
         });
     } else if (alertflag === 3) {
         console.log('慶龍');
         Swal.fire({
             title: '<strong>這模型為什麼修不好？？</strong>',
             footer: '<a class="alert" href="#aboutUs">關心我</a>',
-            // showCloseButton: true,
+            showCloseButton: true,
             showConfirmButton: false,
             showCancelButton: false,
+            allowOutsideClick: false,
         });
     } else if (alertflag === 4) {
         console.log('惠貞');
         Swal.fire({
             title: '<strong>程式要怎麼寫好呢．．．</strong>',
             footer: '<a class="alert" href="#aboutUs">救救我</a>',
-            // showCloseButton: true,
+            showCloseButton: true,
             showConfirmButton: false,
             showCancelButton: false,
+            allowOutsideClick: false,
         });
     } else if (alertflag === 5) {
         console.log('承穎');
         Swal.fire({
             title: '<strong>模型好像可以再更好！</strong>',
             footer: '<a class="alert" href="#aboutUs">認識我</a>',
-            // showCloseButton: true,
+            showCloseButton: true,
             showConfirmButton: false,
             showCancelButton: false,
+            allowOutsideClick: false,
         });
     } else if (alertflag === 6) {
         console.log('芸同');
         Swal.fire({
             title: '<strong>邊可以再對齊一點嗎？</strong>',
             footer: '<a class="alert" href="#aboutUs">設計我</a>',
-            // showCloseButton: true,
+            showCloseButton: true,
             showConfirmButton: false,
             showCancelButton: false,
+            allowOutsideClick: false,
         });
     } else {
         alertflag = 0;
     }
 }
 
-//針對播放的音樂
+//針對倒播的物件
 let projectionPlay = true;
 let curtainPlay01 = true;
 let curtainPlay02 = true;
