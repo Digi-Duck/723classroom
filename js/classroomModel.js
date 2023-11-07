@@ -32,7 +32,7 @@ const loader = new GLTFLoader();
 //上傳模型
 loader.load(
     // resource URL
-    '../model/723classroom15.gltf',
+    '../model/723classroom19.gltf',
 
     // called when the resource is loaded
     function (gltf) {
@@ -142,18 +142,14 @@ let bgMusicPlay = true;
 const messageMusic = document.createElement("audio");
 messageMusic.src = "../audio/ring.m4a";
 
-//抓滑鼠位置
+//點選物件觸發
 function onclick(event) {
     pointer.x = (event.offsetX / gamebox.offsetWidth) * 2 - 1;
     pointer.y = - (event.offsetY / gamebox.offsetHeight) * 2 + 1;
-
-
     // 用攝影機更新射線
     raycaster.setFromCamera(pointer, camera);
-
     // 計算焦點
     const intersects = raycaster.intersectObjects(scene.children);
-
     // console.log(intersects[0].object.name);
     if (intersects[0].object.name.includes('fan01')) {
         flag = 1;
@@ -219,16 +215,9 @@ function onclick(event) {
         alertflag = 6;
         alertFunc();
     } else {
-        console.log('nothing');
         console.log(intersects[0].object.name);
         flag = 0;
     };
-
-    // if (intersects[0].object.name == '') {
-    //     console.log(intersects[1].object.name)
-    // } else {
-    //     console.log(intersects[0].object.name)
-    // };
 }
 
 //滑鼠移動到互動物件
@@ -243,6 +232,9 @@ function mouseMove(event) {
         circleMouse.style.border = '10px solid #88ACFF';
     }else {
         gamebox.style.cursor = 'default';
+        circleMouse.style.border = '10px solid #FF9855';
+    }
+    if (pointer.y >= 0.99 || pointer.y <= -0.99){
         circleMouse.style.border = '10px solid #FF9855';
     }
 }

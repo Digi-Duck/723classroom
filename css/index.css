@@ -180,6 +180,7 @@ html {
 }
 #intro .title-area {
   position: relative;
+  display: none;
 }
 #intro .title-area .vector-star {
   width: 160px;
@@ -203,7 +204,7 @@ html {
   position: relative;
   font-family: "Nikumaru Font";
   font-size: 160px;
-  animation: fade-in 4s 4s;
+  animation: fade-in 4s;
   animation-fill-mode: forwards;
   opacity: 0;
   z-index: 5;
@@ -211,10 +212,11 @@ html {
 #intro .subtitle {
   font-size: 28px;
   margin-top: 75px;
-  animation: fade-in 4s 5s;
+  animation: fade-in 4s 1s;
   animation-fill-mode: forwards;
   opacity: 0;
   z-index: 3;
+  display: none;
 }
 @keyframes fade-in {
   0% {

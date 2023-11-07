@@ -432,12 +432,16 @@
     <!-- loading畫面 -->
     <script>
         const loader = document.querySelector('#loader');
+        const introTitle = document.querySelector('#intro .title-area');
+        const introSub = document.querySelector('#intro .subtitle');
         loader.onmousewheel = function () {
             return false;
         }
         function loadingFunc(){setTimeout(showPage, 5000)};
         function showPage() {
-            loader.style.display = "none";
+            loader.style.display = 'none';
+            introTitle.style.display = 'block';
+            introSub.style.display = 'block';
             loader.onmousewheel = function () {
                 return true;
             }
