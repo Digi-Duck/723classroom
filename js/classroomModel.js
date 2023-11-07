@@ -23,8 +23,6 @@ const color = new THREE.Color(0xeeeeee);
 //動畫變數宣告(承接後func的就可以用)
 let mixer;
 let clips = [];
-let flag = 0;
-let alertflag = 0;
 
 
 //模型生成
@@ -41,7 +39,6 @@ loader.load(
         //動畫的部分
         mixer = new THREE.AnimationMixer(model);
         clips = gltf.animations;
-        console.dir(clips);
 
         //時鐘轉動
         let clockClips = clips.filter(clip => clip.name.includes('clock'));
@@ -92,23 +89,11 @@ loader.load(
             rongAction.play();
         });
 
-        gltf.animations; // Array<THREE.AnimationClip>
-        gltf.scene; // THREE.Group
-        gltf.scenes; // Array<THREE.Group>
-        gltf.cameras; // Array<THREE.Camera>
-        gltf.asset; // Object
-
-    },
-    // called while loading is progressing
-    function (xhr) {
-
-        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-
-    },
-    // called when loading has errors
-    function (error) {
-
-        console.log('An error happened');
+        gltf.animations;
+        gltf.scene;
+        gltf.scenes;
+        gltf.cameras;
+        gltf.asset;
 
     }
 );
@@ -152,68 +137,48 @@ function onclick(event) {
     const intersects = raycaster.intersectObjects(scene.children);
     // console.log(intersects[0].object.name);
     if (intersects[0].object.name.includes('fan01')) {
-        flag = 1;
-        flagFunc();
+        flagFunc(1);
     } else if (intersects[0].object.name.includes('fan02')) {
-        flag = 2;
-        flagFunc();
+        flagFunc(2);
     } else if (intersects[0].object.name.includes('chair_Action_2')) {
-        flag = 3;
-        flagFunc();
+        flagFunc(3);
     } else if (intersects[0].object.name.includes('Audio')) {
-        flag = 4;
-        flagFunc();
-
         if (bgMusicPlay) {
             audioMusic.play();
         } else {
             audioMusic.pause();
             audioMusic.currentTime = 0;
         }
+        flagFunc(4);
         bgMusicPlay = !bgMusicPlay;
-
     } else if (intersects[0].object.name.includes('projection')) {
-        flag = 5;
-        flagFunc();
+        flagFunc(5);
     } else if (intersects[0].object.name.includes('cellphone')) {
-        flag = 6;
-        flagFunc();
+        flagFunc(6);
     } else if (intersects[0].object.name.includes('Computer_host_controllable')) {
-        flag = 7;
-        flagFunc();
+        flagFunc(7);
     } else if (intersects[0].object.name.includes('air_conditioner01')) {
-        flag = 8;
-        flagFunc();
+        flagFunc(8);
     } else if (intersects[0].object.name.includes('air_conditioner02')) {
-        flag = 9;
-        flagFunc();
+        flagFunc(9);
     } else if (intersects[0].object.name.includes('curtains01')) {
-        flag = 10;
-        flagFunc();
+        flagFunc(10);
     } else if (intersects[0].object.name.includes('curtains02')) {
-        flag = 11;
-        flagFunc();
+        flagFunc(11);
     } else if (intersects[0].object.name.includes('curtains03')) {
-        flag = 12;
-        flagFunc();
+        flagFunc(12);
     } else if (intersects[0].object.name.includes('whiteboard')) {
-        alertflag = 1;
-        alertFunc();
+        alertFunc(1);
     } else if (intersects[0].object.name.includes("Teacher's_computer")) {
-        alertflag = 2;
-        alertFunc();
+        alertFunc(2);
     } else if (intersects[0].object.name.includes('rong')) {
-        alertflag = 3;
-        alertFunc();
+        alertFunc(3);
     } else if (intersects[0].object.name.includes('chen')) {
-        alertflag = 4;
-        alertFunc();
+        alertFunc(4);
     } else if (intersects[0].object.name.includes('ying')) {
-        alertflag = 5;
-        alertFunc();
+        alertFunc(5);
     } else if (intersects[0].object.name.includes('tong')) {
-        alertflag = 6;
-        alertFunc();
+        alertFunc(6);
     } else {
         console.log(intersects[0].object.name);
         flag = 0;
@@ -244,7 +209,7 @@ gamebox.addEventListener('click', onclick);
 gamebox.addEventListener('mousemove',mouseMove);
 
 //滑鼠點擊後彈跳視窗物件
-function alertFunc() {
+function alertFunc(alertflag = 0) {
     if (alertflag === 1) {
         console.log('whiteboard');
         Swal.fire({
@@ -323,7 +288,7 @@ let curtainPlay02 = true;
 let curtainPlay03 = true;
 
 //滑鼠點擊後動畫物件
-function flagFunc() {
+function flagFunc(flag = 0) {
     if (flag === 1) {
         let fanClips = clips.filter(clip => clip.name.includes('fan01'));
         fanClips.forEach(function (clip) {
@@ -350,15 +315,16 @@ function flagFunc() {
         animate();
     } else if (flag === 4) {
         let audioClips = clips.filter(clip => clip.name.includes('audio'));
-        audioClips.forEach(function (clip) {
+        audioClips.forEach(function(clip){
             const action = mixer.clipAction(clip);
-            if (bgMusicPlay) {
+            if(bgMusicPlay) {
                 action.play();
-            } else {
+                action.paused = false;
+            }else{
                 action.paused = true;
-                action.reset();
             }
-        });
+        })
+
         animate();
     } else if (flag === 5) {
         let projectionClips = clips.filter(clip => clip.name.includes('projection'));

@@ -369,8 +369,6 @@
     <script>
         const mouseCircle = document.querySelector("#mouse-circle");
         const gamebox = document.querySelector("#gamebox");
-        console.log(gamebox.offsetTop);
-        console.dir(gamebox);
 
         //滾輪
         window.addEventListener("wheel", (evt) => {
@@ -383,7 +381,6 @@
         window.addEventListener("mousemove", (evt) => {
             const x = evt.pageX;
             const y = evt.pageY;
-            // console.log(x, y);
 
             const chen = document.querySelector("#avatar-chen");
             const tong = document.querySelector("#avatar-tong");
@@ -400,13 +397,11 @@
             const topHeight = intro.offsetHeight + explore.offsetHeight + introduce.offsetHeight;
 
             if (x < (aboutUs.offsetWidth) / 2 - 50) {
-                // console.log("left");
                 chen.src = "./picture/avatar/01-chen/chen-left.png";
                 tong.src = "./picture/avatar/02-tong/tong-left.png";
                 ying.src = "./picture/avatar/03-ying/ying-left.png";
                 rong.src = "./picture/avatar/04-rong/rong-left.png";
             } else if (x > (aboutUs.offsetWidth) / 2 + 50) {
-                // console.log("right");
                 chen.src = "./picture/avatar/01-chen/chen-right.png";
                 tong.src = "./picture/avatar/02-tong/tong-right.png";
                 ying.src = "./picture/avatar/03-ying/ying-right.png";
@@ -493,7 +488,6 @@
 
     <!-- 教室模型 -->
     <script type="module" src="./js/classroomModel.js"></script>
-    <!-- <script type="module" src="./js/classroomModelTest.js"></script> -->
 
     <!-- 偵測位置 出現回到教室按鈕 -->
     <script>
