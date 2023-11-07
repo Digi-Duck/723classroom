@@ -180,7 +180,6 @@ function onclick(event) {
     } else if (intersects[0].object.name.includes('tong')) {
         alertFunc(6);
     } else {
-        console.log(intersects[0].object.name);
         flag = 0;
     };
 }

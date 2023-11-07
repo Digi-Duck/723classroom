@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/loading.css">
-    <link rel="shortcut icon" href="./picture/logo02.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./picture/logo.ico" type="image/x-icon">
 
     <!-- aos套件 -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -353,14 +353,10 @@
                 || navigator.userAgent.match(/BlackBerry/i)
                 || navigator.userAgent.match(/Windows Phone/i)
             ) {
-                console.log('ismobile');
                 const mouseCircle = document.querySelector("#mouse-circle");
                 mouseCircle.style.display = 'none';
                 const maskText = document.querySelector(".mask .text");
                 maskText.innerText = '使用手指操作視角和點擊物件互動';
-            }
-            else {
-                console.log('notmobile');
             }
         }
     </script>
@@ -461,7 +457,6 @@
         //增加mask的遮罩
         let startBtn = document.querySelector(".btn-start");
         let mask = document.querySelector(".mask");
-        // console.log(mask);
         let closeBtn = document.querySelector(".btn-close");
 
         startBtn.addEventListener("click", () => {
